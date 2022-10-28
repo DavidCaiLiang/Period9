@@ -127,59 +127,5 @@ public class SuperArray-David-Driver{
         System.out.print(clist.get(i) + "_");
       }
 //-----------------------------------------------------//
-      System.out.println("\n");
-      for (int i = 0; i < blist.size();i++) {
-        blist.set(i,"HI" + blist.get(i));
-      }
-      System.out.println(blist);
-
-      System.out.println("\n");
-      for (int i = 0; i < blist.size(); i++) {
-        if (i == blist.size()-1) {
-          blist.set(i,"NOPE!");
-        }
-        else {
-          blist.set(i,blist.get(i+1));
-        }
-      }
-      System.out.println(blist);
-
-      System.out.println("\n");
-      for (int i = 0; i < alist.size();i++) {
-        alist.set(i, alist.get(i) + i);
-      }
-      System.out.println(alist);
-
-      System.out.println(alist.set(-1,""));
-      System.out.println(alist.get(-1));
-      System.out.println(blist.set(-1,""));
-      System.out.println(blist.get(-1));
-      System.out.println(clist.set(-1,""));
-      System.out.println(clist.get(-1));
-      System.out.println(dlist.set(-1,""));
-      System.out.println(dlist.get(-1));
-
-      System.out.println(alist.set(6,""));
-      System.out.println(alist.get(6));
-      System.out.println(blist.set(11,""));
-      System.out.println(blist.get(11));
-      System.out.println(clist.set(11,""));
-      System.out.println(clist.get(11));
-      System.out.println(dlist.set(11,""));
-      System.out.println(dlist.get(11));
-//-----------------------------------------------------//
-SuperArray elist = new SuperArray(4);
-for (int i = 0; i < 10; i++) {
-  System.out.print("elist add return: " + elist.add(i-1+""));
-  System.out.println("|elist size: "+ elist.size());
-  System.out.println(elist);
-}
-SuperArray flist = new SuperArray(4);
-for (int i = 0; i < 10; i++) {
-  System.out.print("flist add return: " + flist.add(dtest[i] +""));
-  System.out.println("|flist size: "+ flist.size());
-  System.out.println(flist);
-}
-
     }
   }
