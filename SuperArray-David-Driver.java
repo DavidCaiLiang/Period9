@@ -107,26 +107,132 @@ public class SuperArray-David-Driver{
         System.out.println(dlist);
       }
 //-----------------------------------------------------//
-      System.out.println("get/set - test");
-      for (int i = 0; i < alist.size(); i++) {
-        System.out.print(alist.get(i) + "_");
-      }
+System.out.println("\n");
+for (int i = 0; i < alist.size();i++) {
+  System.out.println(alist.set(i, alist.get(i) + i));
+}
+System.out.println(alist);
 
-      System.out.println("\n");
-      for (int i = 0; i < blist.size(); i++) {
-        System.out.print(blist.get(i) + "_");
-      }
-
-      System.out.println("\n");
-      for (int i = 0; i < dlist.size(); i++) {
-        System.out.print(dlist.get(i) + "_");
-      }
-
-      System.out.println("\n");
-      for (int i = 0; i < clist.size(); i++) {
-        System.out.print(clist.get(i) + "_");
-      }
+for (int i = -2; i < 35; i++) {
+  System.out.println(alist.set(i,alist.get(i)));
+  System.out.println(alist.get(i));
+}
+for (int i = -2; i < 35; i++) {
+  System.out.println(blist.set(i,blist.get(i)));
+  System.out.println(blist.get(i));
+}
+for (int i = -2; i < 35; i++) {
+  System.out.println(clist.set(i,clist.get(i)));
+  System.out.println(clist.get(i));
+}
 //-----------------------------------------------------//
+SuperArray elist = new SuperArray(4);
+for (int i = 0; i < 12; i++) {
+System.out.print("elist add return: " + elist.add(i-1+""));
+System.out.println("|elist size: "+ elist.size());
+System.out.println(elist);
+}
+SuperArray flist = new SuperArray(4);
+for (int i = 0; i < 12; i++) {
+System.out.print("flist add return: " + flist.add(dtest[i] +""));
+System.out.println("|flist size: "+ flist.size());
+System.out.println(flist);
+}
 
-    }
-  }
+//-----------------------------------------------------//
+System.out.println("alist removed (Pos0): "+ alist.remove(0));
+System.out.println("alist new size: "+ alist.size());
+System.out.println(alist);
+
+System.out.println("blist removed (Pos1): "+ blist.remove(1));
+System.out.println("blist new size: "+ blist.size());
+System.out.println(blist);
+
+System.out.println("dlist removed (Pos2): "+ dlist.remove(2));
+System.out.println("dlist new size: "+ dlist.size());
+System.out.println(dlist);
+//-----------------------------------------------------//
+SuperArray hlist = new SuperArray();
+System.out.println(hlist);
+hlist.add("");
+hlist.add("");
+hlist.add("");
+hlist.add("");
+hlist.add("-");
+hlist.add("-");
+hlist.add(".");
+System.out.println(hlist);
+SuperArray ilist = new SuperArray();
+for (int i = 0; i < 51; i++) {
+System.out.print("ilist add return: " + ilist.add(i+""));
+System.out.println("|ilist size: "+ ilist.size());
+System.out.println(ilist);
+}
+System.out.println(dlist.size());
+System.out.println(dlist.indexOf("Zameen2"));
+System.out.println(dlist.lastIndexOf("Zameen2"));
+System.out.println(dlist.indexOf("Jonathan7"));
+System.out.println(dlist.lastIndexOf("Jonathan7"));
+System.out.println(dlist.indexOf("Calvin18"));
+System.out.println(dlist.lastIndexOf("Calvin18"));
+System.out.println(dlist.indexOf("Shaon0"));
+System.out.println(dlist.lastIndexOf("Shaon0"));
+System.out.println(dlist.lastIndexOf("a"));
+System.out.println(dlist.indexOf("a"));
+
+for (int i = 55; i>-3;i--) {
+System.out.println(ilist.remove(i));
+System.out.println(ilist);
+}
+
+System.out.println(dlist.remove("Zameen2"));
+System.out.println(dlist);
+System.out.println(dlist.remove("Zameen2"));
+System.out.println(dlist);
+System.out.println(dlist.remove("Zameen2"));
+System.out.println(dlist);
+System.out.println(dlist.remove("Calvin18"));
+System.out.println(dlist);
+System.out.println(dlist.remove("Calvin18"));
+System.out.println(dlist);
+System.out.println(dlist.remove("Calvin18"));
+System.out.println(dlist);
+
+SuperArray jlist = new SuperArray();
+System.out.println(jlist);
+System.out.println(jlist.size());
+jlist.add(0,"lol1");
+System.out.println(jlist);
+jlist.add(-1,"lol2");
+System.out.println(jlist);
+jlist.add(1,"lol3");
+System.out.println(jlist);
+jlist.add(0,"lol4");
+System.out.println(jlist);
+jlist.add(2,"lol5");
+System.out.println(jlist);
+jlist.add(4,"lol6");
+System.out.println(jlist);
+jlist.add(3,"lol7");
+System.out.println(jlist);
+jlist.add(7,"lol8");
+System.out.println(jlist);
+jlist.add(6,"lol9");
+System.out.println(jlist);
+jlist.add(8,"lol10");
+System.out.println(jlist);
+jlist.add(5,"lol11");
+System.out.println(jlist);
+jlist.add(8,"lol12");
+System.out.println(jlist);
+System.out.println(jlist.remove("lol2"));
+System.out.println(jlist);
+System.out.println(jlist.remove("lol3"));
+System.out.println(jlist);
+System.out.println(jlist.remove(4));
+System.out.println(jlist.remove(-1));
+System.out.println(jlist.remove(10));
+System.out.println(jlist.add("lol13"));
+System.out.println(jlist);
+}
+}
