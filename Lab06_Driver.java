@@ -308,16 +308,27 @@ public class Lab06_Driver {
     System.out.println("test13 - test18 expected: 1.28340699E11 or 128,340,699,000");
     System.out.println("test13 - test18   actual: "+ test13.subtract(test18));
   }
-  RationalNumber rat1 = new RationalNumber(11,0);
-  RationalNumber rat2 = new RationalNumber(0,11);
-  RationalNumber rat3 = new RationalNumber(-7,0);
-  RationalNumber rat4 = new RationalNumber(0,-7);
-  RationalNumber rat5 = new RationalNumber(2,1);
-  RationalNumber rat6 = new RationalNumber(1,2);
-  RationalNumber rat7 = new RationalNumber(1,3);
-  RationalNumber rat8 = new RationalNumber(2,4);
-  RationalNumber rat9 = new RationalNumber(3,9);
+  //--------------------//
+  RationalNumber rat0 = new RationalNumber(11,0);
+  RationalNumber rat1 = new RationalNumber(0,11);
+  RationalNumber rat2 = new RationalNumber(-7,0);
+  RationalNumber rat3 = new RationalNumber(0,-7);
+  RationalNumber rat4 = new RationalNumber(2,1);
+  RationalNumber rat5 = new RationalNumber(1,2);
+  RationalNumber rat6 = new RationalNumber(1,3);
+  RationalNumber rat7 = new RationalNumber(2,4);
+  RationalNumber rat8 = new RationalNumber(3,9);
+  RationalNumber rat9 = new RationalNumber(6,2);
+  RationalNumber rat10 = new RationalNumber(1,2);
+  RationalNumber rat11 = new RationalNumber(1,4);
+  RationalNumber rat12 = new RationalNumber(2,8);
+  //--------------------//
   tester = true;
+  if (!(rat0.toString().equals("0"))) {
+    tester = false;
+    System.out.println("Error - rat0.toString()");
+    System.out.println("rat0.toString() -> " + rat0.toString());
+  }
   if (!(rat1.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat1.toString()");
@@ -333,36 +344,441 @@ public class Lab06_Driver {
     System.out.println("Error - rat3.toString()");
     System.out.println("rat3.toString() -> " + rat3.toString());
   }
-  if (!(rat4.toString().equals("0"))) {
+  if (!(rat4.toString().equals("2"))) {
     tester = false;
     System.out.println("Error - rat4.toString()");
     System.out.println("rat4.toString() -> " + rat4.toString());
   }
-  if (!(rat5.toString().equals("2"))) {
+  if (!(rat5.toString().equals("1/2"))) {
     tester = false;
     System.out.println("Error - rat5.toString()");
     System.out.println("rat5.toString() -> " + rat5.toString());
   }
-  if (!(rat6.toString().equals("1/2"))) {
+  if (!(rat6.toString().equals("1/3"))) {
     tester = false;
     System.out.println("Error - rat6.toString()");
     System.out.println("rat6.toString() -> " + rat6.toString());
   }
-  if (!(rat7.toString().equals("1/3"))) {
+  if (!(rat7.toString().equals("1/2"))) {
     tester = false;
     System.out.println("Error - rat7.toString()");
     System.out.println("rat7.toString() -> " + rat7.toString());
   }
-  if (!(rat8.toString().equals("1/2"))) {
+  if (!(rat8.toString().equals("1/3"))) {
     tester = false;
     System.out.println("Error - rat8.toString()");
     System.out.println("rat8.toString() -> " + rat8.toString());
   }
-  if (!(rat9.toString().equals("1/3"))) {
+  if (!(rat9.toString().equals("3"))) {
     tester = false;
     System.out.println("Error - rat9.toString()");
     System.out.println("rat9.toString() -> " + rat9.toString());
   }
-  System.out.println("\n toString (rational) - Test: "+tester);
+  if (!(rat10.toString().equals("1/2"))) {
+    tester = false;
+    System.out.println("Error - rat10.toString()");
+    System.out.println("rat10.toString() -> " + rat10.toString());
   }
+  if (!(rat11.toString().equals("1/4"))) {
+    tester = false;
+    System.out.println("Error - rat11.toString()");
+    System.out.println("rat11.toString() -> " + rat11.toString());
+  }
+  if (!(rat12.toString().equals("1/4"))) {
+    tester = false;
+    System.out.println("Error - rat12.toString()");
+    System.out.println("rat12.toString() -> " + rat12.toString());
+  }
+  System.out.println("\n toString (rational) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  if (rat0.getNumerator() != 0) {
+    tester = false;
+    System.out.println("\nError - rat0.getNumerator()");
+    System.out.println("rat0.getNumerator() -> " + rat0.getNumerator());
+  }
+  if (rat1.getNumerator() != 0) {
+    tester = false;
+    System.out.println("Error - rat1.getNumerator()");
+    System.out.println("rat1.getNumerator() -> " + rat1.getNumerator());
+  }
+  if (rat2.getNumerator() != 0) {
+    tester = false;
+    System.out.println("Error - rat2.getNumerator()");
+    System.out.println("rat2.getNumerator() -> " + rat2.getNumerator());
+  }
+  if (rat3.getNumerator() != 0) {
+    tester = false;
+    System.out.println("Error - rat3.getNumerator()");
+    System.out.println("rat3.getNumerator() -> " + rat3.getNumerator());
+  }
+  if (rat4.getNumerator() != 2) {
+    tester = false;
+    System.out.println("Error - rat4.getNumerator()");
+    System.out.println("rat4.getNumerator() -> " + rat4.getNumerator());
+  }
+  if (rat5.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat5.getNumerator()");
+    System.out.println("rat5.getNumerator() -> " + rat5.getNumerator());
+  }
+  if (rat6.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat6.getNumerator()");
+    System.out.println("rat6.getNumerator() -> " + rat6.getNumerator());
+  }
+  if (rat7.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat7.getNumerator()");
+    System.out.println("rat7.getNumerator() -> " + rat7.getNumerator());
+  }
+  if (rat8.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat8.getNumerator()");
+    System.out.println("rat8.getNumerator() -> " + rat8.getNumerator());
+  }
+  if (rat9.getNumerator() != 3) {
+    tester = false;
+    System.out.println("Error - rat9.getNumerator()");
+    System.out.println("rat9.getNumerator() -> " + rat9.getNumerator());
+  }
+  if (rat10.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat10.getNumerator()");
+    System.out.println("rat10.getNumerator() -> " + rat10.getNumerator());
+  }
+  if (rat11.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat11.getNumerator()");
+    System.out.println("rat11.getNumerator() -> " + rat11.getNumerator());
+  }
+  if (rat12.getNumerator() != 1) {
+    tester = false;
+    System.out.println("Error - rat12.getNumerator()");
+    System.out.println("rat12.getNumerator() -> " + rat12.getNumerator());
+  }
+  System.out.println("\n getNumerator (rational) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  if (rat0.getDenominator() != 1) {
+    tester = false;
+    System.out.println("\nError - rat0.getNumerator()");
+    System.out.println("rat0.getDenominator() -> " + rat0.getDenominator());
+  }
+  if (rat1.getDenominator() != 11) {
+    tester = false;
+    System.out.println("Error - rat1.getDenominator()");
+    System.out.println("rat1.getDenominator() -> " + rat1.getDenominator());
+  }
+  if (rat2.getDenominator() != 1) {
+    tester = false;
+    System.out.println("Error - rat2.getDenominator()");
+    System.out.println("rat2.getDenominator() -> " + rat2.getDenominator());
+  }
+  if (rat3.getDenominator() != -7) {
+    tester = false;
+    System.out.println("Error - rat3.getDenominator()");
+    System.out.println("rat3.getDenominator() -> " + rat3.getDenominator());
+  }
+  if (rat4.getDenominator() != 1) {
+    tester = false;
+    System.out.println("Error - rat4.getDenominator()");
+    System.out.println("rat4.getDenominator() -> " + rat4.getDenominator());
+  }
+  if (rat5.getDenominator() != 2) {
+    tester = false;
+    System.out.println("Error - rat5.getDenominator()");
+    System.out.println("rat5.getDenominator() -> " + rat5.getDenominator());
+  }
+  if (rat6.getDenominator() != 3) {
+    tester = false;
+    System.out.println("Error - rat6.getDenominator()");
+    System.out.println("rat6.getDenominator() -> " + rat6.getDenominator());
+  }
+  if (rat7.getDenominator() != 2) {
+    tester = false;
+    System.out.println("Error - rat7.getDenominator()");
+    System.out.println("rat7.getDenominator() -> " + rat7.getDenominator());
+  }
+  if (rat8.getDenominator() != 3) {
+    tester = false;
+    System.out.println("Error - rat8.getDenominator()");
+    System.out.println("rat8.getDenominator() -> " + rat8.getDenominator());
+  }
+  if (rat9.getDenominator() != 1) {
+    tester = false;
+    System.out.println("Error - rat9.getDenominator()");
+    System.out.println("rat9.getDenominator() -> " + rat9.getDenominator());
+  }
+  if (rat10.getDenominator() != 2) {
+    tester = false;
+    System.out.println("Error - rat10.getDenominator()");
+    System.out.println("rat10.getDenominator() -> " + rat10.getDenominator());
+  }
+  if (rat11.getDenominator() != 4) {
+    tester = false;
+    System.out.println("Error - rat11.getDenominator()");
+    System.out.println("rat11.getDenominator() -> " + rat11.getDenominator());
+  }
+  if (rat12.getDenominator() != 4) {
+    tester = false;
+    System.out.println("Error - rat12.getDenominator()");
+    System.out.println("rat12.getDenominator() -> " + rat12.getDenominator());
+  }
+  System.out.println("\n getDenominator (rational) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  if (rat0.getValue() != 0) {
+    tester = false;
+    System.out.println("Error - rat0.getValue()");
+    System.out.println("rat0.getValue() -> " + rat0.getValue());
+  }
+  if (rat1.getValue() != 0) {
+    tester = false;
+    System.out.println("Error - rat1.getValue()");
+    System.out.println("rat1.getValue() -> " + rat1.getValue());
+  }
+  if (rat2.getValue() != 0) {
+    tester = false;
+    System.out.println("Error - rat2.getValue()");
+    System.out.println("rat2.getValue() -> " + rat2.getValue());
+  }
+  if (rat3.getValue() != 0) {
+    tester = false;
+    System.out.println("Error - rat3.getValue()");
+    System.out.println("rat3.getValue() -> " + rat3.getValue());
+  }
+  if (rat4.getValue() != 2) {
+    tester = false;
+    System.out.println("Error - rat4.getValue()");
+    System.out.println("rat4.getValue() -> " + rat4.getValue());
+  }
+  if (rat5.getValue() != 0.5) {
+    tester = false;
+    System.out.println("Error - rat5.getValue()");
+    System.out.println("rat5.getValue() -> " + rat5.getValue());
+  }
+  if (rat7.getValue() != 0.5) {
+    tester = false;
+    System.out.println("Error - rat7.getValue()");
+    System.out.println("rat7.getValue() -> " + rat7.getValue());
+  }
+  if (rat6.getValue() != (1/3.0)) {
+    tester = false;
+    System.out.println("Error - rat6.getValue()");
+    System.out.println("rat6.getValue() -> " + rat6.getValue());
+  }
+  if (rat8.getValue() != (3/9.0)) {
+    tester = false;
+    System.out.println("Error - rat8.getValue()");
+    System.out.println("rat8.getValue() -> " + rat8.getValue());
+  }
+  if (rat9.getValue() != 3.0) {
+    tester = false;
+    System.out.println("Error - rat9.getValue()");
+    System.out.println("rat9.getValue() -> " + rat9.getValue());
+  }
+  if (rat10.getValue() != 0.5) {
+    tester = false;
+    System.out.println("Error - rat10.getValue()");
+    System.out.println("rat10.getValue() -> " + rat10.getValue());
+  }
+  if (rat11.getValue() != 0.25) {
+    tester = false;
+    System.out.println("Error - rat11.getValue()");
+    System.out.println("rat11.getValue() -> " + rat11.getValue());
+  }
+  if (rat12.getValue() != 0.25) {
+    tester = false;
+    System.out.println("Error - rat12.getValue()");
+    System.out.println("rat12.getValue() -> " + rat12.getValue());
+  }
+  System.out.println("\n getValue(rational) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  if (!(rat0.equals(rat1))) {
+    tester = false;
+    System.out.println("Error - rat0.equals(rat1)");
+    System.out.println("rat0.toString() ->" + rat0.toString());
+    System.out.println("rat1.toString() ->" + rat1.toString());
+  }
+  if (!(rat1.equals(rat2))) {
+    tester = false;
+    System.out.println("Error - rat1.equals(rat2)");
+    System.out.println("rat1.toString() ->" + rat1.toString());
+    System.out.println("rat2.toString() ->" + rat2.toString());
+  }
+  if (!(rat2.equals(rat3))) {
+    tester = false;
+    System.out.println("Error - rat2.equals(rat3)");
+    System.out.println("rat2.toString() ->" + rat2.toString());
+    System.out.println("rat3.toString() ->" + rat3.toString());
+  }
+  if (rat3.equals(rat4)) {
+    tester = false;
+    System.out.println("Error - rat2.equals(rat3)");
+    System.out.println("rat2.toString() ->" + rat2.toString());
+    System.out.println("rat3.toString() ->" + rat3.toString());
+  }
+  if (rat3.equals(rat4)) {
+    tester = false;
+    System.out.println("Error - rat2.equals(rat3)");
+    System.out.println("rat2.toString() ->" + rat2.toString());
+    System.out.println("rat3.toString() ->" + rat3.toString());
+  }
+  if (!(rat5.equals(rat7))) {
+    tester = false;
+    System.out.println("Error - rat5.equals(rat7)");
+    System.out.println("rat5.toString() ->" + rat5.toString());
+    System.out.println("rat7.toString() ->" + rat7.toString());
+  }
+  if (!(rat6.equals(rat8))) {
+    tester = false;
+    System.out.println("Error - rat6.equals(rat8)");
+    System.out.println("rat6.toString() ->" + rat6.toString());
+    System.out.println("rat8.toString() ->" + rat8.toString());
+  }
+  if (!(rat5.equals(rat10))) {
+    tester = false;
+    System.out.println("Error - rat5.equals(rat10)");
+    System.out.println("rat5.toString() ->" + rat5.toString());
+    System.out.println("rat10.toString() ->" + rat10.toString());
+  }
+  if (!(rat11.equals(rat12))) {
+    tester = false;
+    System.out.println("Error - rat11.equals(rat12)");
+    System.out.println("rat11.toString() ->" + rat11.toString());
+    System.out.println("rat12.toString() ->" + rat12.toString());
+  }
+  if (rat10.equals(rat11)) {
+    tester = false;
+    System.out.println("Error - rat10.equals(rat11)");
+    System.out.println("rat10.toString() ->" + rat10.toString());
+    System.out.println("rat11.toString() ->" + rat11.toString());
+  }
+  if (rat9.equals(rat10)) {
+    tester = false;
+    System.out.println("Error - rat9.equals(rat10)");
+    System.out.println("rat9.toString() ->" + rat9.toString());
+    System.out.println("rat10.toString() ->" + rat10.toString());
+  }
+  if (rat8.equals(rat9)) {
+    tester = false;
+    System.out.println("Error - rat8.equals(rat9)");
+    System.out.println("rat8.toString() ->" + rat8.toString());
+    System.out.println("rat9.toString() ->" + rat9.toString());
+  }
+  if (rat7.equals(rat8)) {
+    tester = false;
+    System.out.println("Error - rat7.equals(rat8)");
+    System.out.println("rat7.toString() ->" + rat7.toString());
+    System.out.println("rat8.toString() ->" + rat8.toString());
+  }
+  System.out.println("\n equals(rational) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  if (!(((rat0.reciprocal()).toString()).equals("0"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat0);
+    System.out.println("Reciprocal: "+rat0.reciprocal());
+  }
+  if (!(((rat1.reciprocal()).toString()).equals("0"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat1);
+    System.out.println("Reciprocal: "+rat1.reciprocal());
+  }
+  if (!(((rat2.reciprocal()).toString()).equals("0"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat2);
+    System.out.println("Reciprocal: "+rat2.reciprocal());
+  }
+  if (!(((rat3.reciprocal()).toString()).equals("0"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat3);
+    System.out.println("Reciprocal: "+rat3.reciprocal());
+  }
+  if (!(((rat4.reciprocal()).toString()).equals("1/2"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat4);
+    System.out.println("Reciprocal: "+rat4.reciprocal());
+  }
+  if (!(((rat5.reciprocal()).toString()).equals("2"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat5);
+    System.out.println("Reciprocal: "+rat5.reciprocal());
+  }
+  if (!(((rat6.reciprocal()).toString()).equals("3"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat6);
+    System.out.println("Reciprocal: "+rat6.reciprocal());
+  }
+  if (!(((rat7.reciprocal()).toString()).equals("2"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat7);
+    System.out.println("Reciprocal: "+rat7.reciprocal());
+  }
+  if (!(((rat8.reciprocal()).toString()).equals("3"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat8);
+    System.out.println("Reciprocal: "+rat8.reciprocal());
+  }
+  if (!(((rat9.reciprocal()).toString()).equals("1/3"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat9);
+    System.out.println("Reciprocal: "+rat9.reciprocal());
+  }
+  if (!(((rat10.reciprocal()).toString()).equals("2"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat10);
+    System.out.println("Reciprocal: "+rat10.reciprocal());
+  }
+  if (!(((rat11.reciprocal()).toString()).equals("4"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat11);
+    System.out.println("Reciprocal: "+rat11.reciprocal());
+  }
+  if (!(((rat12.reciprocal()).toString()).equals("4"))) {
+    tester = false;
+    System.out.println("Orginal: "+rat12);
+    System.out.println("Reciprocal: "+rat12.reciprocal());
+  }
+  System.out.println("\n Reciprocal(rational) - Test: "+tester);
+  tester = true;
+  if (RationalNumber.gcd(2,4) != 2) {
+    tester = false;
+    System.out.println("Num 1: 2");
+    System.out.println("Num 2: 2");
+  }
+  if (RationalNumber.gcd(11,1) != 1) {
+    tester = false;
+    System.out.println("Num 1: 11");
+    System.out.println("Num 2: 1");
+  }
+  if (RationalNumber.gcd(17,13) != 1) {
+    tester = false;
+    System.out.println("Num 1: 17");
+    System.out.println("Num 2: 13");
+  }
+  if (RationalNumber.gcd(100,10) != 10) {
+    tester = false;
+    System.out.println("Num 1: 100");
+    System.out.println("Num 2: 10");
+  }
+  if (RationalNumber.gcd(512,16) != 16) {
+    tester = false;
+    System.out.println("Num 1: 512");
+    System.out.println("Num 2: 16");
+  }
+  if (RationalNumber.gcd(100,15) != 5) {
+    tester = false;
+    System.out.println("Num 1: 100");
+    System.out.println("Num 2: 15");
+  }
+  System.out.println("\n gcf(rational) - Test: "+tester);
+
+
+
+
+}
+
 }
