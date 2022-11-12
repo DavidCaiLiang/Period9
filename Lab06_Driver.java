@@ -1,8 +1,3 @@
-/*
-How should we handle negative 0.0 compareTo 0.0 functionality.
-How should we deal with -0.0 as a result for mutiply when we might expect 0.0.
-What margin of error should be use like 0.0000001%.
-*/
 public class Lab06_Driver {
   public static void main(String[] args) {
     RealNumber test0 = new RealNumber(0.0);
@@ -351,6 +346,13 @@ public class Lab06_Driver {
   RationalNumber rat35 = new RationalNumber(115,20);
   RationalNumber rat36 = new RationalNumber(20,-115);
   RationalNumber rat37 = new RationalNumber(-20,115);
+  RationalNumber rat39 = new RationalNumber(-14,7);
+  RationalNumber rat40 = new RationalNumber(-100,5);
+  RationalNumber rat41 = new RationalNumber(-100,10);
+  RationalNumber rat42 = new RationalNumber(-24,6);
+  RationalNumber rat43 = new RationalNumber(-24,8);
+  RationalNumber rat44 = new RationalNumber(-30,60);
+  RationalNumber rat45 = new RationalNumber(-20,60);
   //--------------------//
   tester = true;
   if (!(rat0.toString().equals("0"))) {
@@ -358,7 +360,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat0.toString()");
     System.out.println("rat0.toString() -> " + rat0);
   }
-  if (!(rat1.toString().equals("0"))) {
+  if (!(rat1.toString().equals("0/11"))) {
     tester = false;
     System.out.println("Error - rat1.toString()");
     System.out.println("rat1.toString() -> " + rat1);
@@ -368,7 +370,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat2.toString()");
     System.out.println("rat2.toString() -> " + rat2);
   }
-  if (!(rat3.toString().equals("0"))) {
+  if (!(rat3.toString().equals("0/7"))) {
     tester = false;
     System.out.println("Error - rat3.toString()");
     System.out.println("rat3.toString() -> " + rat3);
@@ -483,12 +485,12 @@ public class Lab06_Driver {
     System.out.println("Error - rat25.toString()");
     System.out.println("rat25.toString() -> " + rat25);
   }
-  if (!(rat26.toString().equals("0"))) {
+  if (!(rat26.toString().equals("0/55"))) {
     tester = false;
     System.out.println("Error - rat26.toString()");
     System.out.println("rat26.toString() -> " + rat26);
   }
-  if (!(rat27.toString().equals("0"))) {
+  if (!(rat27.toString().equals("0/55"))) {
     tester = false;
     System.out.println("Error - rat27.toString()");
     System.out.println("rat27.toString() -> " + rat27);
@@ -543,7 +545,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat37.toString()");
     System.out.println("rat37 -> " + rat37);
   }
-  if (!(rat38.toString().equals("0"))) {
+  if (!(rat38.toString().equals("0/55"))) {
     tester = false;
     System.out.println("Error - rat38.toString()");
     System.out.println("rat38 -> " + rat38);
@@ -754,7 +756,7 @@ public class Lab06_Driver {
     System.out.println("\nError - rat0.getDenominator()");
     System.out.println("rat0.getDenominator() -> " + rat0.getDenominator());
   }
-  if (rat1.getDenominator() != 1) {
+  if (rat1.getDenominator() != 11) {
     tester = false;
     System.out.println("Error - rat1.getDenominator()");
     System.out.println("rat1.getDenominator() -> " + rat1.getDenominator());
@@ -764,7 +766,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat2.getDenominator()");
     System.out.println("rat2.getDenominator() -> " + rat2.getDenominator());
   }
-  if (rat3.getDenominator() != 1) {
+  if (rat3.getDenominator() != 7) {
     tester = false;
     System.out.println("Error - rat3.getDenominator()");
     System.out.println("rat3.getDenominator() -> " + rat3.getDenominator());
@@ -879,12 +881,12 @@ public class Lab06_Driver {
     System.out.println("Error - rat25.getDenominator()");
     System.out.println("rat25.getDenominator() -> " + rat25.getDenominator());
   }
-  if (rat26.getDenominator() != 1) {
+  if (rat26.getDenominator() != 55) {
     tester = false;
     System.out.println("Error - rat26.getDenominator()");
     System.out.println("rat26.getDenominator() -> " + rat26.getDenominator());
   }
-  if (rat27.getDenominator() != 1) {
+  if (rat27.getDenominator() != 55) {
     tester = false;
     System.out.println("Error - rat27.getDenominator()");
     System.out.println("rat27.getDenominator() -> " + rat27.getDenominator());
@@ -909,7 +911,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat31.getDenominator()");
     System.out.println("rat31.getDenominator() -> " + rat31.getDenominator());
   }
-  if (rat38.getDenominator() != 1) {
+  if (rat38.getDenominator() != 55) {
     tester = false;
     System.out.println("Error - rat38.getDenominator()");
     System.out.println("rat38.getDenominator() -> " + rat38.getDenominator());
@@ -943,11 +945,6 @@ public class Lab06_Driver {
     tester = false;
     System.out.println("Error - rat37.getDenominator()");
     System.out.println("rat37.getDenominator() -> " + rat37.getDenominator());
-  }
-  if (rat38.getDenominator() != 1) {
-    tester = false;
-    System.out.println("Error - rat38.getDenominator()");
-    System.out.println("rat38.getDenominator() -> " + rat38.getDenominator());
   }
    System.out.println("\n getDenominator (rational) - Test: "+tester);
 //   //--------------------//
@@ -1151,19 +1148,19 @@ public class Lab06_Driver {
 
 //   //--------------------//
   tester = true;
-  if (!(rat0.equals(rat1))) {
+  if (rat0.equals(rat1)) {
     tester = false;
     System.out.println("Error - rat0.equals(rat1)");
     System.out.println("rat0 -> " + rat0);
     System.out.println("rat1 -> " + rat1);
   }
-  if (!(rat1.equals(rat2))) {
+  if (rat1.equals(rat2)) {
     tester = false;
     System.out.println("Error - rat1.equals(rat2)");
     System.out.println("rat1 -> " + rat1);
     System.out.println("rat2 -> " + rat2);
   }
-  if (!(rat2.equals(rat3))) {
+  if (rat2.equals(rat3)) {
     tester = false;
     System.out.println("Error - rat2.equals(rat3)");
     System.out.println("rat2 -> " + rat2);
@@ -1621,7 +1618,7 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Num 1: -81");
     System.out.println("Num 2: 23");
   }
-  if (RationalNumber.gcd(0,18) != 18) {
+  if (RationalNumber.gcd(0,18) != 1) {
     tester = false;
     System.out.println("Num 1: 0");
     System.out.println("Num 2: 18");
@@ -1641,7 +1638,7 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Num 1: -300");
     System.out.println("Num 2: 18");
   }
-  if (RationalNumber.gcd(-0,18) != 18) {
+  if (RationalNumber.gcd(-0,18) != 1) {
     tester = false;
     System.out.println("Num 1: -0");
     System.out.println("Num 2: 18");
@@ -1651,12 +1648,12 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Num 1: 81");
     System.out.println("Num 2: -18");
   }
-  if (RationalNumber.gcd(-81,-18) != -9) {
+  if (RationalNumber.gcd(-81,-18) != 9) {
     tester = false;
     System.out.println("Num 1: -81");
     System.out.println("Num 2: -18");
   }
-  if (RationalNumber.gcd(-81,0) != -81) {
+  if (RationalNumber.gcd(-81,0) != 1) {
     tester = false;
     System.out.println("Num 1: -81");
     System.out.println("Num 2: 0");
@@ -1664,27 +1661,137 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
   System.out.println("\n gcf(rational) - Test: "+tester);
 //   //--------------------//
   tester = true;
-  if (rat0.multiply(rat3).multiply(rat1).multiply(rat2).getValue() != 0) {
+  if (!(rat0.multiply(rat3).multiply(rat1).multiply(rat2).toString().equals("0/77"))) {
+    tester = false;
     System.out.println("Error - rat0.multiply(rat3).mutiply(rat1).multiply(rat2)");
-    System.out.println("Output :" + rat0.multiply(rat3).multiply(rat1).multiply(rat2));
+    System.out.println("Output: " + rat0.multiply(rat3).multiply(rat1).multiply(rat2));
   }
   if (rat4.multiply(rat5).multiply(rat6).multiply(rat9).getValue() != 1) {
+    tester = false;
     System.out.println("Error - rat4.multiply(rat5).multiply(rat6).multiply(rat9)");
-    System.out.println("Output :" + rat4.multiply(rat5).multiply(rat6).multiply(rat9));
+    System.out.println("Output: " + rat4.multiply(rat5).multiply(rat6).multiply(rat9));
+  }
+  if (!(rat34.multiply(rat10).multiply(rat11).multiply(rat12).toString().equals("7/32"))) {
+    tester = false;
+    System.out.println("Error - rat34.multiply(rat10).multiply(rat11).multiply(rat12)");
+    System.out.println("Output: " + rat34.multiply(rat10).multiply(rat11).multiply(rat12));
+  }
+  if (!(rat42.multiply(rat43).multiply(rat41).multiply(rat40).multiply(rat22).multiply(rat39).toString().equals("-2/5"))) {
+    tester = false;
+    System.out.println("Error - rat42.multiply(rat43).multiply(rat41).mutiply(rat40).mutiply(rat22).multiply(39)");
+    System.out.println("Output: "+rat42.multiply(rat43).multiply(rat41).multiply(rat40).multiply(rat22).multiply(rat39));
+  }
+  if (!(rat32.multiply(rat44).multiply(rat45).multiply(rat12).multiply(rat8).multiply(rat43).toString().equals("-500"))) {
+    tester = false;
+    System.out.println("Error - rat32.multiply(rat44).multiply(rat45).multiply(rat12).multiply(rat8).multiply(rat43)");
+    System.out.println("Output: "+ rat32.multiply(rat44).multiply(rat45).multiply(rat12).multiply(rat8).multiply(rat43));
+  }
+  if (!(rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43).toString().equals("0/308"))) {
+    tester = false;
+    System.out.println("Error - rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43)");
+    System.out.println("Output: "+ rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43));
+  }
+  if(!(rat45.multiply(rat44).multiply(rat43).multiply(rat42).multiply(rat41).multiply(rat40).multiply(rat9).toString().equals("1200"))){
+    tester = false;
+    System.out.println("Error - rat45.multiply(rat44).multiply(rat43).multiply(rat42).multiply(rat41).multiply(rat40).multiply(rat9)");
+    System.out.println("Output: "+ rat45.multiply(rat44).multiply(rat43).multiply(rat42).multiply(rat41).multiply(rat40).multiply(rat9));
+  }
+  if (!(rat33.multiply(rat18).multiply(rat10).multiply(rat19).multiply(rat34).multiply(rat8).toString().equals("-20979/136"))) {
+    tester = false;
+    System.out.println("Error - rat33.multiply(rat18).multiply(rat10).multiply(rat19).multiply(rat34).multiply(rat8)");
+    System.out.println("Output: "+rat33.multiply(rat18).multiply(rat10).multiply(rat19).multiply(rat34).multiply(rat8)
+    );
+  }
+  if (!(rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat0).multiply(rat41).toString().equals("0/7"))) {
+    tester = false;
+    System.out.println("Error - rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat0).multiply(rat41)");
+    System.out.println("Output: "+rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat41).multiply(rat0));
+  }
+  if(!(rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43).toString().equals("0/161"))) {
+    tester = false;
+    System.out.println("Error - rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43)");
+    System.out.println("Output: "+rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43));
   }
   System.out.println("\n mutiply(rational) - Test: "+tester);
 //   //--------------------//
-//   tester = true;
-//
-//   System.out.println("\n divide(rational) - Test: "+tester);
+  tester = true;
+  if(!(rat4.divide(rat5).toString().equals("4"))) {
+    tester = false;
+    System.out.println("Error - rat4.divide(rat5)");
+    System.out.println("Output: "+ rat4.divide(rat5));
+  }
+  if (!(rat7.divide(rat7).toString().equals("1"))) {
+    tester = false;
+    System.out.println("Error - rat7.divide(rat7)");
+    System.out.println("Output: "+rat7.divide(rat7));
+  }
+  if (!(rat4.divide(rat5).divide(rat6).divide(rat7).divide(rat8).divide(rat9).toString().equals("24"))) {
+    tester = false;
+    System.out.println("Error - rat4.divide(rat5).divide(rat6).divide(rat7).divide(rat8).divide(rat9)");
+    System.out.println("Output: "+rat4.divide(rat5).divide(rat6).divide(rat7).divide(rat8).divide(rat9));
+  }
+  if (!(rat0.divide(rat1).toString().equals("0"))) {
+    tester = false;
+    System.out.println("Error - rat0.divide(rat1)");
+    System.out.println("Output: "+rat0.divide(rat1));
+  }
+  if (!(rat2.divide(rat5).toString().equals("0"))) {
+    tester = false;
+    System.out.println("Error - rat2.divide(rat5)");
+    System.out.println("Output: "+rat2.divide(rat5));
+  }
+  if (!(rat5.divide(rat2).toString().equals("0/2"))) {
+    tester = false;
+    System.out.println("Error - rat5.divide(rat2)");
+    System.out.println("Output: "+ rat5.divide(rat2));
+  }
+  System.out.println("\n divide(rational) - Test: "+tester);
 //   //--------------------//
-//   tester = true;
-//
-//   System.out.println("\n add(rational) - Test: "+tester);
+  tester = true;
+if (!(rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7).toString().equals("10/3"))) {
+  tester = false;
+  System.out.println("Error - rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7)");
+  System.out.println("Output: "+ rat0.add(rat1).add(rat2).add(rat3));
+}
+if (!(rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).toString().equals("10/21"))) {
+  tester = false;
+  System.out.println("Error - rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15)");
+  System.out.println("Output: "+rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15));
+}
+if (!(rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21).toString().equals("-9/7"))) {
+  tester = false;
+  System.out.println("Error - rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21)");
+  System.out.println("Output: "+rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21));
+}
+if (!(rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29).toString().equals("-13199/12000"))) {
+  tester = false;
+  System.out.println("Error - rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29)");
+  System.out.println("Output: "+ rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29));
+}
+  System.out.println("\n add(rational) - Test: "+tester);
 //   //--------------------//
-//   tester = true;
-//
-//   System.out.println("\n subtract(rational) - Test: "+tester);
+  tester = true;
+  if (!(rat0.subtract(rat1).subtract(rat2).subtract(rat3).subtract(rat4).subtract(rat5).subtract(rat6).subtract(rat7).toString().equals("-10/3"))) {
+    tester = false;
+    System.out.println("Error - rat0.subtract(rat1).subtract(rat2).subtract(rat3).subtract(rat4).subtract(rat5).subtract(rat6).subtract(rat7)");
+    System.out.println("Output: "+ rat0.subtract(rat1).subtract(rat2).subtract(rat3));
+  }
+  if (!(rat8.subtract(rat9).subtract(rat10).subtract(rat11).subtract(rat12).subtract(rat13).subtract(rat14).subtract(rat15).toString().equals("31/21"))) {
+    tester = false;
+    System.out.println("Error - rat8.subtract(rat9).subtract(rat10).subtract(rat11).subtract(rat12).subtract(rat13).subtract(rat14).subtract(rat15)");
+    System.out.println("Output: "+rat8.subtract(rat9).subtract(rat10).subtract(rat11).subtract(rat12).subtract(rat13).subtract(rat14).subtract(rat15));
+  }
+  if (!(rat15.subtract(rat16).subtract(rat17).subtract(rat18).subtract(rat19).subtract(rat20).subtract(rat21).toString().equals("-9/7"))) {
+    tester = false;
+    System.out.println("Error - rat15.subtract(rat16).subtract(rat17).subtract(rat18).subtract(rat19).subtract(rat20).subtract(rat21)");
+    System.out.println("Output: "+rat15.subtract(rat16).subtract(rat17).subtract(rat18).subtract(rat19).subtract(rat20).subtract(rat21));
+  }
+  if (!(rat22.subtract(rat23).subtract(rat24).subtract(rat25).subtract(rat26).subtract(rat27).subtract(rat28).subtract(rat29).toString().equals("13201/12000"))) {
+    tester = false;
+    System.out.println("Error - rat22.subtract(rat23).subtract(rat24).subtract(rat25).subtract(rat26).subtract(rat27).subtract(rat28).subtract(rat29)");
+    System.out.println("Output: "+ rat22.subtract(rat23).subtract(rat24).subtract(rat25).subtract(rat26).subtract(rat27).subtract(rat28).subtract(rat29));
+  }
+  System.out.println("\n subtract(rational) - Test: "+tester);
 }
 
 }
