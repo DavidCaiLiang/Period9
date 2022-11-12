@@ -28,27 +28,37 @@ public class Lab06_Driver {
     RealNumber test25 = new RealNumber(-1/Math.E);
     RealNumber test26 = new RealNumber(-Math.PI/Math.E);
     RealNumber test27 = new RealNumber(-Math.E/Math.PI);
+    RealNumber test28 = new RealNumber(0.5);
+    RealNumber test29 = new RealNumber(-0.5);
+    RealNumber test30 = new RealNumber(2);
+    RealNumber test31 = new RealNumber(-2);
+    RealNumber test32 = new RealNumber(1/3.0);
+    RealNumber test33 = new RealNumber(-1/3.0);
+    RealNumber test34 = new RealNumber(3);
+    RealNumber test35 = new RealNumber(-3);
+    RealNumber test36 = new RealNumber(-7);
+    RealNumber test37 = new RealNumber(7);
     //--------------------//
     boolean tester = true;
-  RealNumber[] test = {test0,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11,test12,test13,test14,test15,test16,test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27};
-  for (int i = 0; i < test.length; i++) {
-    for (int a = 0; a < test.length; a++) {
-      Double x = test[i].getValue();
-      Double y = test[a].getValue();
-      if (x.compareTo(y) != test[i].compareTo(test[a])) {
-        tester = false;
-        System.out.println("Error: test"+i+".compareTo(test"+a+")");
-        System.out.println("RealNumber");
-        System.out.println(test[i].getValue());
-        System.out.println(test[a].getValue());
-        System.out.println("Double");
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println("Double compare: " +x.compareTo(y));
-        System.out.println("RealNumber compare: "+test[i].compareTo(test[a]));
+    RealNumber[] test = {test0,test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11,test12,test13,test14,test15,test16,test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27};
+    for (int i = 0; i < test.length; i++) {
+      for (int a = 0; a < test.length; a++) {
+        Double x = test[i].getValue();
+        Double y = test[a].getValue();
+        if (x.compareTo(y) != test[i].compareTo(test[a])) {
+          tester = false;
+          System.out.println("Error: test"+i+".compareTo(test"+a+")");
+          System.out.println("RealNumber");
+          System.out.println(test[i].getValue());
+          System.out.println(test[a].getValue());
+          System.out.println("Double");
+          System.out.println(x);
+          System.out.println(y);
+          System.out.println("Double compare: " +x.compareTo(y));
+          System.out.println("RealNumber compare: "+test[i].compareTo(test[a]));
+        }
       }
     }
-  }
     System.out.println("CompareTo (part 1) (real) - test: " + tester);
     //--------------------//
     //Some of the test below is randomly generated.
@@ -126,33 +136,33 @@ public class Lab06_Driver {
     System.out.println("\nAdd (real) - test: " + tester);
     //--------------------//
     {
-    System.out.println("\ntest19 + test1 expected: 10.999999924067791...");
-    System.out.println("test19 + test1   actual: "+ test19.add(test1));
-    System.out.println("test13 + test21 expected: 5.240849E10...");
-    System.out.println("test13 + test21   actual: "+ test13.add(test21));
-    System.out.println("test3 + test13 expected: 5.2408489896751E10... or 52,408,489,896.751...");
-    System.out.println("test3 + test13   actual: "+ test3.add(test13));
-    System.out.println("test15 + test5 expected: 5.240848999888235E10... or 52,408,489,998.88235...");
-    System.out.println("test15 + test5   actual: "+ test15.add(test5));
-    System.out.println("test3 + test2 expected: -108.249");
-    System.out.println("test3 + test2   actual: "+ test3.add(test2));
-    System.out.println("test10 + test0 expected: 11.0");
-    System.out.println("test10 + test0   actual: "+ test10.add(test0));
-    System.out.println("test13 + test21 expected: 5.240849E10");
-    System.out.println("test13 + test21   actual: "+ test13.add(test21));
-    System.out.println("test6 + test5 expected: 5.24084900001428571E10...");
-    System.out.println("test6 + test5   actual: "+ test6.add(test5));
-    System.out.println("test15 + test7 expected: -2.57918552036199...");
-    System.out.println("test15 + test7   actual: "+ test15.add(test7));
-    System.out.println("test3 + test0 expected: -103.249");
-    System.out.println("test3 + test0   actual: "+ test3.add(test0));
-    System.out.println("test22 + test25 expected: 2.7737132124...");
-    System.out.println("test22 + test25   actual: "+ test22.add(test25));
-    System.out.println("test23 + test24 expected: -2.399971942275...");
-    System.out.println("test23 + test24   actual: "+ test23.add(test24));
-    System.out.println("test6 + test24 expected: -2.5754246856019....");
-    System.out.println("test6 + test24   actual: "+ test6.add(test24));
-  }
+      System.out.println("\ntest19 + test1 expected: 10.999999924067791...");
+      System.out.println("test19 + test1   actual: "+ test19.add(test1));
+      System.out.println("test13 + test21 expected: 5.240849E10...");
+      System.out.println("test13 + test21   actual: "+ test13.add(test21));
+      System.out.println("test3 + test13 expected: 5.2408489896751E10... or 52,408,489,896.751...");
+      System.out.println("test3 + test13   actual: "+ test3.add(test13));
+      System.out.println("test15 + test5 expected: 5.240848999888235E10... or 52,408,489,998.88235...");
+      System.out.println("test15 + test5   actual: "+ test15.add(test5));
+      System.out.println("test3 + test2 expected: -108.249");
+      System.out.println("test3 + test2   actual: "+ test3.add(test2));
+      System.out.println("test10 + test0 expected: 11.0");
+      System.out.println("test10 + test0   actual: "+ test10.add(test0));
+      System.out.println("test13 + test21 expected: 5.240849E10");
+      System.out.println("test13 + test21   actual: "+ test13.add(test21));
+      System.out.println("test6 + test5 expected: 5.24084900001428571E10...");
+      System.out.println("test6 + test5   actual: "+ test6.add(test5));
+      System.out.println("test15 + test7 expected: -2.57918552036199...");
+      System.out.println("test15 + test7   actual: "+ test15.add(test7));
+      System.out.println("test3 + test0 expected: -103.249");
+      System.out.println("test3 + test0   actual: "+ test3.add(test0));
+      System.out.println("test22 + test25 expected: 2.7737132124...");
+      System.out.println("test22 + test25   actual: "+ test22.add(test25));
+      System.out.println("test23 + test24 expected: -2.399971942275...");
+      System.out.println("test23 + test24   actual: "+ test23.add(test24));
+      System.out.println("test6 + test24 expected: -2.5754246856019....");
+      System.out.println("test6 + test24   actual: "+ test6.add(test24));
+    }
     //--------------------//
     tester = true;
     for (int i = 0; i < test.length; i++) {
@@ -168,37 +178,37 @@ public class Lab06_Driver {
     System.out.println("\nMultiply (real) - test: " + tester);
     //--------------------//
     {
-    System.out.println("\ntest3 * test20 expected: -5.411124184E-5... or -0.00005411124184...");
-    System.out.println("test3 * test20   actual: "+ test3.multiply(test20));
-    System.out.println("test6 * test2 expected: -0.7142857142857...");
-    System.out.println("test6 * test2   actual: "+ test6.multiply(test2));
-    System.out.println("test8 * test16 expected: 3.872983346207...");
-    System.out.println("test8 * test16   actual: "+ test8.multiply(test16));
-    System.out.println("test0 * test11 expected: 0.0");
-    System.out.println("test0 * test11   actual: "+ test0.multiply(test11));
-    System.out.println("test9 * test15 expected: 2.9570161711898...");
-    System.out.println("test9 * test15   actual: "+ test9.multiply(test15));
-    System.out.println("test2 * test12 expected: -697.1");
-    System.out.println("test2 * test12   actual: "+ test2.multiply(test12));
-    System.out.println("test19 * test22 expected: -2.38548069965E-7...");
-    System.out.println("test19 * test22   actual: "+ test19.multiply(test22));
-    System.out.println("test5 * test22 expected: 1.64646127169734E11... or 164,646,127,169.734...");
-    System.out.println("test5 * test22   actual: "+ test5.multiply(test22));
-    System.out.println("test6 * test24 expected: -0.3883259754941...");
-    System.out.println("test6 * test24   actual: "+ test6.multiply(test24));
-    System.out.println("test0 * test16 expected: 0.0");
-    System.out.println("test0 * test16   actual: "+ test0.multiply(test16));
-    System.out.println("test4 * test6 expected: 19.9171428571428571...");
-    System.out.println("test4 * test6   actual: "+ test4.multiply(test6));
-    System.out.println("test8 * test17 expected: -5.7445626465380...");
-    System.out.println("test8 * test17   actual: "+ test8.multiply(test17));
-    System.out.println("test22 * test25 expected: -1.1557273497909...");
-    System.out.println("test22 * test25   actual: "+ test22.multiply(test25));
-    System.out.println("test23 * test24 expected: -0.865255979432265...");
-    System.out.println("test23 * test24   actual: "+ test23.multiply(test24));
-    System.out.println("test23 * -0.0 expected: 0.0");
-    System.out.println("test23 * -0.0   actual: "+ test23.multiply(new RealNumber(-0.0)));
-  }
+      System.out.println("\ntest3 * test20 expected: -5.411124184E-5... or -0.00005411124184...");
+      System.out.println("test3 * test20   actual: "+ test3.multiply(test20));
+      System.out.println("test6 * test2 expected: -0.7142857142857...");
+      System.out.println("test6 * test2   actual: "+ test6.multiply(test2));
+      System.out.println("test8 * test16 expected: 3.872983346207...");
+      System.out.println("test8 * test16   actual: "+ test8.multiply(test16));
+      System.out.println("test0 * test11 expected: 0.0");
+      System.out.println("test0 * test11   actual: "+ test0.multiply(test11));
+      System.out.println("test9 * test15 expected: 2.9570161711898...");
+      System.out.println("test9 * test15   actual: "+ test9.multiply(test15));
+      System.out.println("test2 * test12 expected: -697.1");
+      System.out.println("test2 * test12   actual: "+ test2.multiply(test12));
+      System.out.println("test19 * test22 expected: -2.38548069965E-7...");
+      System.out.println("test19 * test22   actual: "+ test19.multiply(test22));
+      System.out.println("test5 * test22 expected: 1.64646127169734E11... or 164,646,127,169.734...");
+      System.out.println("test5 * test22   actual: "+ test5.multiply(test22));
+      System.out.println("test6 * test24 expected: -0.3883259754941...");
+      System.out.println("test6 * test24   actual: "+ test6.multiply(test24));
+      System.out.println("test0 * test16 expected: 0.0");
+      System.out.println("test0 * test16   actual: "+ test0.multiply(test16));
+      System.out.println("test4 * test6 expected: 19.9171428571428571...");
+      System.out.println("test4 * test6   actual: "+ test4.multiply(test6));
+      System.out.println("test8 * test17 expected: -5.7445626465380...");
+      System.out.println("test8 * test17   actual: "+ test8.multiply(test17));
+      System.out.println("test22 * test25 expected: -1.1557273497909...");
+      System.out.println("test22 * test25   actual: "+ test22.multiply(test25));
+      System.out.println("test23 * test24 expected: -0.865255979432265...");
+      System.out.println("test23 * test24   actual: "+ test23.multiply(test24));
+      System.out.println("test23 * -0.0 expected: 0.0");
+      System.out.println("test23 * -0.0   actual: "+ test23.multiply(new RealNumber(-0.0)));
+    }
     //--------------------//
     RealNumber testNoZero0 = new RealNumber(11.0);
     RealNumber testNoZero1 = new RealNumber(-5.0);
@@ -226,7 +236,7 @@ public class Lab06_Driver {
     RealNumber testNoZero23 = new RealNumber(-1/Math.E);
     RealNumber testNoZero24 = new RealNumber(-Math.PI/Math.E);
     RealNumber testNoZero25 = new RealNumber(-Math.E/Math.PI);
-   //--------------------//
+    //--------------------//
     RealNumber[] testNoZero = {testNoZero0,testNoZero1,testNoZero2,testNoZero3,testNoZero4,testNoZero5,testNoZero6,testNoZero7,testNoZero8,testNoZero9, testNoZero10, testNoZero11,testNoZero12,testNoZero13,testNoZero14,testNoZero15,testNoZero16,testNoZero17,testNoZero18,testNoZero19,testNoZero20,testNoZero21,testNoZero22,testNoZero23,testNoZero24,testNoZero25};
     tester = true;
     for (int i = 0; i < testNoZero.length; i++) {
@@ -242,31 +252,31 @@ public class Lab06_Driver {
     System.out.println("\nDivide (real) - test: " + tester);
     //--------------------//
     {
-    System.out.println("\ntestNoZero[11] / testNoZero[21] expected: 438.00084776348897...");
-    System.out.println("testNoZero[11] / testNoZero[21]   actual: "+ testNoZero11.divide(testNoZero21));
-    System.out.println("testNoZero[6] / testNoZero[15] expected: -0.653619870346...");
-    System.out.println("testNoZero[6] / testNoZero[15]   actual: "+ testNoZero6.divide(testNoZero15));
-    System.out.println("testNoZero[21] / testNoZero[23] expected: -0.8652559794...");
-    System.out.println("testNoZero[21] / testNoZero[23]   actual: "+ testNoZero21.divide(testNoZero23));
-    System.out.println("testNoZero[24] / testNoZero[1] expected: 0.23114546995818434...");
-    System.out.println("testNoZero[24] / testNoZero[1]   actual: "+ testNoZero24.divide(testNoZero1));
-    System.out.println("testNoZero[16] / testNoZero[4] expected: -6.3314112752636E-11...");
-    System.out.println("testNoZero[16] / testNoZero[4]   actual: "+ testNoZero16.divide(testNoZero4));
-    System.out.println("testNoZero[18] / testNoZero[0] expected: -6.902931090909E-9...");
-    System.out.println("testNoZero[18] / testNoZero[0]   actual: "+ testNoZero18.divide(testNoZero0));
-    System.out.println("testNoZero[12] / testNoZero[20] expected: 1.668214048696E10... or 16,682,140,486.96...");
-    System.out.println("testNoZero[12] / testNoZero[20]   actual: "+ testNoZero12.divide(testNoZero20));
-    System.out.println("testNoZero[3] / testNoZero[16] expected: -42.0367116610318...");
-    System.out.println("testNoZero[3] / testNoZero[16]   actual: "+ testNoZero3.divide(testNoZero16));
-    System.out.println("testNoZero[19] / testNoZero[14] expected: -4.6891806842105E-7...");
-    System.out.println("testNoZero[19] / testNoZero[14]   actual: "+ testNoZero19.divide(testNoZero14));
-    System.out.println("testNoZero[6] / testNoZero[16] expected: 0.44067042669...");
-    System.out.println("testNoZero[6] / testNoZero[16]   actual: "+ testNoZero6.divide(testNoZero16));
-    System.out.println("testNoZero[15] / testNoZero[7] expected: 1.2909944487358...");
-    System.out.println("testNoZero[15] / testNoZero[7]   actual: "+ testNoZero15.divide(testNoZero7));
-    System.out.println("test0 / testNoZero[7] expected: 0.0");
-    System.out.println("test0 / testNoZero[7]   actual: "+ test0.divide(testNoZero7));
-  }
+      System.out.println("\ntestNoZero[11] / testNoZero[21] expected: 438.00084776348897...");
+      System.out.println("testNoZero[11] / testNoZero[21]   actual: "+ testNoZero11.divide(testNoZero21));
+      System.out.println("testNoZero[6] / testNoZero[15] expected: -0.653619870346...");
+      System.out.println("testNoZero[6] / testNoZero[15]   actual: "+ testNoZero6.divide(testNoZero15));
+      System.out.println("testNoZero[21] / testNoZero[23] expected: -0.8652559794...");
+      System.out.println("testNoZero[21] / testNoZero[23]   actual: "+ testNoZero21.divide(testNoZero23));
+      System.out.println("testNoZero[24] / testNoZero[1] expected: 0.23114546995818434...");
+      System.out.println("testNoZero[24] / testNoZero[1]   actual: "+ testNoZero24.divide(testNoZero1));
+      System.out.println("testNoZero[16] / testNoZero[4] expected: -6.3314112752636E-11...");
+      System.out.println("testNoZero[16] / testNoZero[4]   actual: "+ testNoZero16.divide(testNoZero4));
+      System.out.println("testNoZero[18] / testNoZero[0] expected: -6.902931090909E-9...");
+      System.out.println("testNoZero[18] / testNoZero[0]   actual: "+ testNoZero18.divide(testNoZero0));
+      System.out.println("testNoZero[12] / testNoZero[20] expected: 1.668214048696E10... or 16,682,140,486.96...");
+      System.out.println("testNoZero[12] / testNoZero[20]   actual: "+ testNoZero12.divide(testNoZero20));
+      System.out.println("testNoZero[3] / testNoZero[16] expected: -42.0367116610318...");
+      System.out.println("testNoZero[3] / testNoZero[16]   actual: "+ testNoZero3.divide(testNoZero16));
+      System.out.println("testNoZero[19] / testNoZero[14] expected: -4.6891806842105E-7...");
+      System.out.println("testNoZero[19] / testNoZero[14]   actual: "+ testNoZero19.divide(testNoZero14));
+      System.out.println("testNoZero[6] / testNoZero[16] expected: 0.44067042669...");
+      System.out.println("testNoZero[6] / testNoZero[16]   actual: "+ testNoZero6.divide(testNoZero16));
+      System.out.println("testNoZero[15] / testNoZero[7] expected: 1.2909944487358...");
+      System.out.println("testNoZero[15] / testNoZero[7]   actual: "+ testNoZero15.divide(testNoZero7));
+      System.out.println("test0 / testNoZero[7] expected: 0.0");
+      System.out.println("test0 / testNoZero[7]   actual: "+ test0.divide(testNoZero7));
+    }
     //--------------------//
     tester = true;
     for (int i = 0; i < test.length; i++) {
@@ -282,29 +292,29 @@ public class Lab06_Driver {
     System.out.println("\nSubtract (real) - test: " + tester);
     //--------------------//
     {
-    System.out.println("\ntest3 - test20 expected: -103.2490005240849....");
-    System.out.println("test3 - test20   actual: "+ test3.subtract(test20));
-    System.out.println("test17 - test5 expected: -5.240849000331662479E10... or -52,408,490,003.31662479...");
-    System.out.println("test17 - test5   actual: "+ test17.subtract(test5));
-    System.out.println("test16 - test1 expected: -8.7639320225002103...");
-    System.out.println("test16 - test1   actual: "+ test16.subtract(test1));
-    System.out.println("test17 - test14 expected: -3.45948193321254....");
-    System.out.println("test17 - test14   actual: "+ test17.subtract(test14));
-    System.out.println("test1 - test14 expected: 10.85714315714...");
-    System.out.println("test1 - test14   actual: "+ test1.subtract(test14));
-    System.out.println("test12 - test22 expected: 136.27840734641...");
-    System.out.println("test12 - test22   actual: "+ test12.subtract(test22));
-    System.out.println("test18 - test16 expected: -7.5932209002236E10... or -75,932,209,002.236...");
-    System.out.println("test18 - test16   actual: "+ test18.subtract(test16));
-    System.out.println("test19 - test6 expected: -0.142857218789351857...");
-    System.out.println("test19 - test6   actual: "+ test19.subtract(test6));
-    System.out.println("test4 - test16 expected: 137.183932022500");
-    System.out.println("test4 - test16   actual: "+ test4.subtract(test16));
-    System.out.println("test12 - test27 expected: 140.285255979432...");
-    System.out.println("test12 - test27   actual: "+ test12.subtract(test27));
-    System.out.println("test13 - test18 expected: 1.31340699E11 or 131,340,699,000");
-    System.out.println("test13 - test18   actual: "+ test13.subtract(test18));
-  }
+      System.out.println("\ntest3 - test20 expected: -103.2490005240849....");
+      System.out.println("test3 - test20   actual: "+ test3.subtract(test20));
+      System.out.println("test17 - test5 expected: -5.240849000331662479E10... or -52,408,490,003.31662479...");
+      System.out.println("test17 - test5   actual: "+ test17.subtract(test5));
+      System.out.println("test16 - test1 expected: -8.7639320225002103...");
+      System.out.println("test16 - test1   actual: "+ test16.subtract(test1));
+      System.out.println("test17 - test14 expected: -3.45948193321254....");
+      System.out.println("test17 - test14   actual: "+ test17.subtract(test14));
+      System.out.println("test1 - test14 expected: 10.85714315714...");
+      System.out.println("test1 - test14   actual: "+ test1.subtract(test14));
+      System.out.println("test12 - test22 expected: 136.27840734641...");
+      System.out.println("test12 - test22   actual: "+ test12.subtract(test22));
+      System.out.println("test18 - test16 expected: -7.5932209002236E10... or -75,932,209,002.236...");
+      System.out.println("test18 - test16   actual: "+ test18.subtract(test16));
+      System.out.println("test19 - test6 expected: -0.142857218789351857...");
+      System.out.println("test19 - test6   actual: "+ test19.subtract(test6));
+      System.out.println("test4 - test16 expected: 137.183932022500");
+      System.out.println("test4 - test16   actual: "+ test4.subtract(test16));
+      System.out.println("test12 - test27 expected: 140.285255979432...");
+      System.out.println("test12 - test27   actual: "+ test12.subtract(test27));
+      System.out.println("test13 - test18 expected: 1.31340699E11 or 131,340,699,000");
+      System.out.println("test13 - test18   actual: "+ test13.subtract(test18));
+    }
   //--------------------//
   RationalNumber rat0 = new RationalNumber(11,0);
   RationalNumber rat1 = new RationalNumber(0,11);
@@ -319,7 +329,6 @@ public class Lab06_Driver {
   RationalNumber rat10 = new RationalNumber(1,2);
   RationalNumber rat11 = new RationalNumber(1,4);
   RationalNumber rat12 = new RationalNumber(2,8);
-  //I don't know how to deal with these. Also below newly added.
   RationalNumber rat13 = new RationalNumber(-18,14);
   RationalNumber rat14 = new RationalNumber(-18,7);
   RationalNumber rat15 = new RationalNumber(18,-14);
@@ -360,7 +369,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat0.toString()");
     System.out.println("rat0.toString() -> " + rat0);
   }
-  if (!(rat1.toString().equals("0/11"))) {
+  if (!(rat1.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat1.toString()");
     System.out.println("rat1.toString() -> " + rat1);
@@ -370,7 +379,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat2.toString()");
     System.out.println("rat2.toString() -> " + rat2);
   }
-  if (!(rat3.toString().equals("0/7"))) {
+  if (!(rat3.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat3.toString()");
     System.out.println("rat3.toString() -> " + rat3);
@@ -485,12 +494,12 @@ public class Lab06_Driver {
     System.out.println("Error - rat25.toString()");
     System.out.println("rat25.toString() -> " + rat25);
   }
-  if (!(rat26.toString().equals("0/55"))) {
+  if (!(rat26.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat26.toString()");
     System.out.println("rat26.toString() -> " + rat26);
   }
-  if (!(rat27.toString().equals("0/55"))) {
+  if (!(rat27.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat27.toString()");
     System.out.println("rat27.toString() -> " + rat27);
@@ -545,7 +554,7 @@ public class Lab06_Driver {
     System.out.println("Error - rat37.toString()");
     System.out.println("rat37 -> " + rat37);
   }
-  if (!(rat38.toString().equals("0/55"))) {
+  if (!(rat38.toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat38.toString()");
     System.out.println("rat38 -> " + rat38);
@@ -1309,62 +1318,62 @@ public class Lab06_Driver {
   }
   System.out.println("\n equals(rational) (Part 1) - Test: "+tester);
   //--------------------//
-RationalNumber[] rats = {rat0,rat1,rat2,rat3,rat4,rat5,rat6,rat7,rat8,rat9,rat10,rat11,rat12,rat13,rat14,rat15,rat16,rat13,rat18,rat19,rat20,rat21,rat22,rat23,rat24,rat25,rat26,rat27,rat28,rat29,rat30,rat31,rat32,rat33,rat34,rat35,rat36,rat37};
-//--------------------//
-tester = true;
-for (int i = 0; i < rats.length; i++) {
-  for (int a = 0; a < rats.length; a++) {
-    if (rats[i].equals(rats[a]) != ((rats[i].getNumerator() == rats[a].getNumerator()) && (rats[i].getDenominator() == rats[a].getDenominator()))) {
-      tester = false;
-      System.out.println(rats[i]);
-      System.out.println(rats[a]);
-      System.out.println("Expected Output: " + ((rats[i].getNumerator() == rats[a].getNumerator()) && (rats[i].getDenominator() == rats[a].getDenominator())));
-      System.out.println("Actual Output: " + rats[i].equals(rats[a]));
+  RationalNumber[] rats = {rat0,rat1,rat2,rat3,rat4,rat5,rat6,rat7,rat8,rat9,rat10,rat11,rat12,rat13,rat14,rat15,rat16,rat13,rat18,rat19,rat20,rat21,rat22,rat23,rat24,rat25,rat26,rat27,rat28,rat29,rat30,rat31,rat32,rat33,rat34,rat35,rat36,rat37};
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < rats.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      if (rats[i].equals(rats[a]) != ((rats[i].getNumerator() == rats[a].getNumerator()) && (rats[i].getDenominator() == rats[a].getDenominator()))) {
+        tester = false;
+        System.out.println(rats[i]);
+        System.out.println(rats[a]);
+        System.out.println("Expected Output: " + ((rats[i].getNumerator() == rats[a].getNumerator()) && (rats[i].getDenominator() == rats[a].getDenominator())));
+        System.out.println("Actual Output: " + rats[i].equals(rats[a]));
+      }
     }
   }
-}
-System.out.println("\n equals(rational) (Part 2) - Test: "+tester);
-//--------------------//
-tester = true;
-for (int i = 0; i < rats.length; i++) {
-  for (int a = 0; a < rats.length; a++) {
-    if (rats[i].equals(rats[a].reciprocal()) != ((rats[i].getNumerator() == (rats[a].reciprocal()).getNumerator()) && (rats[i].getDenominator() == (rats[a].reciprocal()).getDenominator()))) {
-      tester = false;
-      System.out.println("i: "+rats[i]);
-      System.out.println("a: "+rats[a]);
-      System.out.println("a reciprocal: "+(rats[a].reciprocal()));
-      System.out.println("Expected Output: " + ((rats[i].getNumerator() == (rats[a].reciprocal()).getNumerator()) && (rats[i].getDenominator() == (rats[a].reciprocal()).getDenominator())));
-      System.out.println("Actual Output: " + rats[i].equals(rats[a]));
+  System.out.println("\n equals(rational) (Part 2) - Test: "+tester);
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < rats.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      if (rats[i].equals(rats[a].reciprocal()) != ((rats[i].getNumerator() == (rats[a].reciprocal()).getNumerator()) && (rats[i].getDenominator() == (rats[a].reciprocal()).getDenominator()))) {
+        tester = false;
+        System.out.println("i: "+rats[i]);
+        System.out.println("a: "+rats[a]);
+        System.out.println("a reciprocal: "+(rats[a].reciprocal()));
+        System.out.println("Expected Output: " + ((rats[i].getNumerator() == (rats[a].reciprocal()).getNumerator()) && (rats[i].getDenominator() == (rats[a].reciprocal()).getDenominator())));
+        System.out.println("Actual Output: " + rats[i].equals(rats[a]));
+      }
     }
   }
-}
-System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
+  System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
   //--------------------//
   tester = true;
   if (!(((rat0.reciprocal()).toString()).equals("0"))) {
-    tester = false;
-    System.out.println("Error - rat0.reciprocal()");
-    System.out.println("Orginal: "+rat0);
-    System.out.println("Reciprocal: "+rat0.reciprocal());
-  }
+      tester = false;
+      System.out.println("Error - rat0.reciprocal()");
+      System.out.println("Orginal: "+rat0);
+      System.out.println("Reciprocal: "+rat0.reciprocal());
+    }
   if (!(((rat1.reciprocal()).toString()).equals("0"))) {
-    tester = false;
-    System.out.println("Error - rat1.reciprocal()");
-    System.out.println("Orginal: "+rat1);
-    System.out.println("Reciprocal: "+rat1.reciprocal());
-  }
+      tester = false;
+      System.out.println("Error - rat1.reciprocal()");
+      System.out.println("Orginal: "+rat1);
+      System.out.println("Reciprocal: "+rat1.reciprocal());
+    }
   if (!(((rat2.reciprocal()).toString()).equals("0"))) {
-    tester = false;
-    System.out.println("Error - rat2.reciprocal()");
-    System.out.println("Orginal: "+rat2);
-    System.out.println("Reciprocal: "+rat2.reciprocal());
-  }
+      tester = false;
+      System.out.println("Error - rat2.reciprocal()");
+      System.out.println("Orginal: "+rat2);
+      System.out.println("Reciprocal: "+rat2.reciprocal());
+    }
   if (!(((rat3.reciprocal()).toString()).equals("0"))) {
-    tester = false;
-    System.out.println("Error - rat3.reciprocal()");
-    System.out.println("Orginal: "+rat3);
-    System.out.println("Reciprocal: "+rat3.reciprocal());
-  }
+      tester = false;
+      System.out.println("Error - rat3.reciprocal()");
+      System.out.println("Orginal: "+rat3);
+      System.out.println("Reciprocal: "+rat3.reciprocal());
+    }
   if (!(((rat4.reciprocal()).toString()).equals("1/2"))) {
     tester = false;
     System.out.println("Error - rat4.reciprocal()");
@@ -1576,7 +1585,7 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Reciprocal: "+rat37.reciprocal());
   }
   System.out.println("\n Reciprocal(rational) - Test: "+tester);
-//   //--------------------//
+  //--------------------//
   tester = true;
   if (RationalNumber.gcd(2,4) != 2) {
     tester = false;
@@ -1659,9 +1668,9 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Num 2: 0");
   }
   System.out.println("\n gcf(rational) - Test: "+tester);
-//   //--------------------//
+  //--------------------//
   tester = true;
-  if (!(rat0.multiply(rat3).multiply(rat1).multiply(rat2).toString().equals("0/77"))) {
+  if (!(rat0.multiply(rat3).multiply(rat1).multiply(rat2).toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat0.multiply(rat3).mutiply(rat1).multiply(rat2)");
     System.out.println("Output: " + rat0.multiply(rat3).multiply(rat1).multiply(rat2));
@@ -1686,7 +1695,7 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Error - rat32.multiply(rat44).multiply(rat45).multiply(rat12).multiply(rat8).multiply(rat43)");
     System.out.println("Output: "+ rat32.multiply(rat44).multiply(rat45).multiply(rat12).multiply(rat8).multiply(rat43));
   }
-  if (!(rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43).toString().equals("0/308"))) {
+  if (!(rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43).toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43)");
     System.out.println("Output: "+ rat1.multiply(rat32).multiply(rat21).multiply(rat14).multiply(rat19).multiply(rat43));
@@ -1702,18 +1711,28 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Output: "+rat33.multiply(rat18).multiply(rat10).multiply(rat19).multiply(rat34).multiply(rat8)
     );
   }
-  if (!(rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat0).multiply(rat41).toString().equals("0/7"))) {
+  if (!(rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat0).multiply(rat41).toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat0).multiply(rat41)");
     System.out.println("Output: "+rat6.multiply(rat13).multiply(rat42).multiply(rat7).multiply(rat41).multiply(rat0));
   }
-  if(!(rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43).toString().equals("0/161"))) {
+  if(!(rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43).toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43)");
     System.out.println("Output: "+rat34.multiply(rat36).multiply(rat28).multiply(rat14).multiply(rat31).multiply(rat43));
   }
-  System.out.println("\n mutiply(rational) - Test: "+tester);
-//   //--------------------//
+  if(!(rat12.multiply(rat44).multiply(rat33).multiply(rat34).multiply(rat14).multiply(rat43).toString().equals("-2997/68"))) {
+    tester = false;
+    System.out.println("Error - rat12.multiply(rat44).multiply(rat33).multiply(rat34).multiply(rat14).multiply(rat43)");
+    System.out.println("Output: "+rat12.multiply(rat44).multiply(rat33).multiply(rat34).multiply(rat14).multiply(rat43));
+  }
+  if(!(rat13.multiply(rat28).multiply(rat4).multiply(rat7).multiply(rat8).multiply(rat10).toString().equals("0"))) {
+    tester = false;
+    System.out.println("Error - rat13.multiply(rat28).multiply(rat4).multiply(rat7).multiply(rat8).multiply(rat10)");
+    System.out.println("Output: "+rat13.multiply(rat28).multiply(rat4).multiply(rat7).multiply(rat8).multiply(rat10));
+  }
+   System.out.println("\n mutiply(rational) - Test: "+tester);
+  //--------------------//
   tester = true;
   if(!(rat4.divide(rat5).toString().equals("4"))) {
     tester = false;
@@ -1740,36 +1759,62 @@ System.out.println("\n equals(rational) with reciprocal  - Test: "+tester);
     System.out.println("Error - rat2.divide(rat5)");
     System.out.println("Output: "+rat2.divide(rat5));
   }
-  if (!(rat5.divide(rat2).toString().equals("0/2"))) {
+  if (!(rat5.divide(rat2).toString().equals("0"))) {
     tester = false;
     System.out.println("Error - rat5.divide(rat2)");
     System.out.println("Output: "+ rat5.divide(rat2));
   }
+  if (!(rat32.divide(rat39).divide(rat40).divide(rat41).toString().equals("-30"))) {
+  tester = false;
+  System.out.println("Error - rat32.divide(rat39).divide(rat40).divide(rat41)");
+  System.out.println("Output: "+rat32.divide(rat39).divide(rat40).divide(rat41));
+  }
+  if (!(rat32.divide(rat39).divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9).toString().equals("5/3"))) {
+  tester = false;
+  System.out.println("Error - rat32.divide(rat39).divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9)");
+  System.out.println("Output: "+rat32.divide(rat39).divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9));
+  }
+  if (!(rat32.divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9).toString().equals("-10/3"))) {
+  tester = false;
+  System.out.println("Error - rat32.divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9)");
+  System.out.println("Output: "+rat32.divide(rat40).divide(rat41).divide(rat42).divide(rat43).divide(rat44).divide(rat9));
+  }
+  if (!(rat7).divide(rat8).divide(rat9).divide(rat10).divide(rat11).divide(rat12).divide(rat44).toString().equals("-1/8"))
   System.out.println("\n divide(rational) - Test: "+tester);
-//   //--------------------//
+  //--------------------//
   tester = true;
-if (!(rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7).toString().equals("10/3"))) {
-  tester = false;
-  System.out.println("Error - rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7)");
-  System.out.println("Output: "+ rat0.add(rat1).add(rat2).add(rat3));
-}
-if (!(rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).toString().equals("10/21"))) {
-  tester = false;
-  System.out.println("Error - rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15)");
-  System.out.println("Output: "+rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15));
-}
-if (!(rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21).toString().equals("-9/7"))) {
-  tester = false;
-  System.out.println("Error - rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21)");
-  System.out.println("Output: "+rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21));
-}
-if (!(rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29).toString().equals("-13199/12000"))) {
-  tester = false;
-  System.out.println("Error - rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29)");
-  System.out.println("Output: "+ rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29));
-}
+  if (!(rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7).toString().equals("10/3"))) {
+    tester = false;
+    System.out.println("Error - rat0.add(rat1).add(rat2).add(rat3).add(rat4).add(rat5).add(rat6).add(rat7)");
+    System.out.println("Output: "+ rat0.add(rat1).add(rat2).add(rat3));
+  }
+  if (!(rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).toString().equals("10/21"))) {
+    tester = false;
+    System.out.println("Error - rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15)");
+    System.out.println("Output: "+rat8.add(rat9).add(rat10).add(rat11).add(rat12).add(rat13).add(rat14).add(rat15));
+  }
+  if (!(rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21).toString().equals("-9/7"))) {
+    tester = false;
+    System.out.println("Error - rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21)");
+    System.out.println("Output: "+rat15.add(rat16).add(rat17).add(rat18).add(rat19).add(rat20).add(rat21));
+  }
+  if (!(rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29).toString().equals("-13199/12000"))) {
+    tester = false;
+    System.out.println("Error - rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29)");
+    System.out.println("Output: "+ rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).add(rat29));
+  }
+  if (!(rat30.add(rat31).add(rat32).add(rat33).add(rat34).add(rat35).add(rat36).add(rat37).toString().equals("18797609/1564"))) {
+    tester = false;
+    System.out.println("Error - rat30.add(rat31).add(rat32).add(rat33).add(rat34).add(rat35).add(rat36).add(rat37)");
+    System.out.println("Output: "+rat30.add(rat31).add(rat32).add(rat33).add(rat34).add(rat35).add(rat36).add(rat37));
+  }
+  if (!(rat38.add(rat39).add(rat40).add(rat41).add(rat42).add(rat43).add(rat44).add(rat45).toString().equals("-239/6"))) {
+    tester = false;
+    System.out.println("Error - rat38.add(rat39).add(rat40).add(rat41).add(rat42).add(rat43).add(rat44).add(rat45)");
+    System.out.println("Output: "+rat38.add(rat39).add(rat40).add(rat41).add(rat42).add(rat43).add(rat44).add(rat45));
+  }
   System.out.println("\n add(rational) - Test: "+tester);
-//   //--------------------//
+  //--------------------//
   tester = true;
   if (!(rat0.subtract(rat1).subtract(rat2).subtract(rat3).subtract(rat4).subtract(rat5).subtract(rat6).subtract(rat7).toString().equals("-10/3"))) {
     tester = false;
@@ -1791,7 +1836,262 @@ if (!(rat22.add(rat23).add(rat24).add(rat25).add(rat26).add(rat27).add(rat28).ad
     System.out.println("Error - rat22.subtract(rat23).subtract(rat24).subtract(rat25).subtract(rat26).subtract(rat27).subtract(rat28).subtract(rat29)");
     System.out.println("Output: "+ rat22.subtract(rat23).subtract(rat24).subtract(rat25).subtract(rat26).subtract(rat27).subtract(rat28).subtract(rat29));
   }
+  if (!(rat30.subtract(rat31).subtract(rat32).subtract(rat33).subtract(rat34).subtract(rat35).subtract(rat36).subtract(rat37).toString().equals("-18797609/1564"))) {
+    tester = false;
+    System.out.println("Error - rat30.subtract(rat31).subtract(rat32).subtract(rat33).subtract(rat34).subtract(rat35).subtract(rat36).subtract(rat37)");
+    System.out.println("Output: "+rat30.subtract(rat31).subtract(rat32).subtract(rat33).subtract(rat34).subtract(rat35).subtract(rat36).subtract(rat37));
+  }
+  if (!(rat38.subtract(rat39).subtract(rat40).subtract(rat41).subtract(rat42).subtract(rat43).subtract(rat44).subtract(rat45).toString().equals("239/6"))) {
+    tester = false;
+    System.out.println("Error - rat38.subtract(rat39).subtract(rat40).subtract(rat41).subtract(rat42).subtract(rat43).subtract(rat44).subtract(rat45)");
+    System.out.println("Output: "+rat38.subtract(rat39).subtract(rat40).subtract(rat41).subtract(rat42).subtract(rat43).subtract(rat44).subtract(rat45));
+  }
   System.out.println("\n subtract(rational) - Test: "+tester);
-}
+ //--------------------//
+ System.out.println("\n compareTo(rational - real) (Part 1) - Tests");
+ System.out.println("test1.compareTo(rat11) Expected: 1");
+ System.out.println("test1.compareTo(rat11)   Actual: "+test1.compareTo(rat11));
+ System.out.println("test10.compareTo(rat9) Expected: 1");
+ System.out.println("test10.compareTo(rat9)   Actual: "+test10.compareTo(rat9));
+ System.out.println("test1.compareTo(rat13) Expected: 1");
+ System.out.println("test1.compareTo(rat13)   Actual: "+test1.compareTo(rat13));
+ System.out.println("test5.compareTo(rat18) Expected: 1");
+ System.out.println("test5.compareTo(rat18)   Actual: "+test5.compareTo(rat18));
+ System.out.println("test12.compareTo(rat18) Expected: 1");
+ System.out.println("test12.compareTo(rat18)   Actual: "+test12.compareTo(rat18));
+ System.out.println("test10.compareTo(rat32) Expected: -1");
+ System.out.println("test10.compareTo(rat32)   Actual: "+test10.compareTo(rat32));
+ System.out.println("test0.compareTo(rat0) Expected: 0");
+ System.out.println("test0.compareTo(rat0)   Actual: "+test0.compareTo(rat0));
+ System.out.println("test21.compareTo(rat3) Expected: 0");
+ System.out.println("test21.compareTo(rat3)   Actual: "+test21.compareTo(rat3));
+ System.out.println("test10.compareTo(rat9) Expected: 1");
+ System.out.println("test10.compareTo(rat9)   Actual: "+test10.compareTo(rat9));
+ System.out.println("test37.compareTo(rat34) Expected: 0");
+ System.out.println("test37.compareTo(rat34)   Actual: "+test37.compareTo(rat34));
+ System.out.println("test30.compareTo(rat4) Expected: 0");
+ System.out.println("test30.compareTo(rat4)   Actual: "+test30.compareTo(rat4));
+ System.out.println("test9.compareTo(rat6) Expected: -1");
+ System.out.println("test9.compareTo(rat6)   Actual: "+test9.compareTo(rat6));
+ System.out.println("test19.compareTo(rat34) Expected: -1");
+ System.out.println("test19.compareTo(rat34)   Actual: "+test19.compareTo(rat34));
+ System.out.println("test26.compareTo(rat45) Expected: -1");
+ System.out.println("test26.compareTo(rat45)   Actual: "+test26.compareTo(rat45));
+ System.out.println("test18.compareTo(rat22) Expected: -1");
+ System.out.println("test18.compareTo(rat22)   Actual: "+test18.compareTo(rat22));
+ System.out.println("test36.compareTo(rat43) Expected: -1");
+ System.out.println("test36.compareTo(rat43)   Actual: "+test36.compareTo(rat43));
+ System.out.println("test28.compareTo(rat10) Expected: 0");
+ System.out.println("test28.compareTo(rat10)   Actual: "+test28.compareTo(rat10));
+   //--------------------//
+ System.out.println("rat10.compareTo(test28) Expected: 0");
+ System.out.println("rat10.compareTo(test28)   Actual: "+rat10.compareTo(test28));
+ System.out.println("rat43.compareTo(test36) Expected: 1");
+ System.out.println("rat43.compareTo(test36)   Actual: "+rat43.compareTo(test36));
+ System.out.println("rat22.compareTo(test18) Expected: 1");
+ System.out.println("rat22.compareTo(test18)   Actual: "+rat22.compareTo(test18));
+ System.out.println("rat45.compareTo(test26) Expected: 1");
+ System.out.println("rat45.compareTo(test26)   Actual: "+rat45.compareTo(test26));
+ System.out.println("rat9.compareTo(test10) Expected: -1");
+ System.out.println("rat9.compareTo(test10)   Actual: "+rat9.compareTo(test10));
+ System.out.println("rat34.compareTo(test37) Expected: 0");
+ System.out.println("rat34.compareTo(test37)   Actual: "+rat34.compareTo(test37));
+ System.out.println("rat4.compareTo(test30) Expected: 0");
+ System.out.println("rat4.compareTo(test30)   Actual: "+rat4.compareTo(test30));
+ System.out.println("rat11.compareTo(test1) Expected: -1");
+ System.out.println("rat11.compareTo(test1)   Actual: "+rat11.compareTo(test1));
+ System.out.println("rat9.compareTo(test10) Expected: -1");
+ System.out.println("rat9.compareTo(test10)   Actual: "+rat9.compareTo(test10));
+ System.out.println("rat13.compareTo(test1) Expected: -1");
+ System.out.println("rat13.compareTo(test1)   Actual: "+rat13.compareTo(test1));
+ System.out.println("rat18.compareTo(test5) Expected: -1");
+ System.out.println("rat18.compareTo(test5)   Actual: "+rat18.compareTo(test5));
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < test.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      Double x = test[i].getValue();
+      Double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+      if (test[i].compareTo(rats[a]) != x.compareTo(y)) {
+        tester = false;
+        System.out.println("Error - CompareTo(real-rational)");
+        System.out.println("Real: " + test[i]);
+        System.out.println("Rational: " + rats[a]);
+      }
+    }
+  }
+  System.out.println("\n compareTo(rational - real) (Part 2) - Test: "+ tester);
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < test.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      Double x = test[i].getValue();
+      Double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+      if (rats[a].compareTo(test[i]) != y.compareTo(x)) {
+        tester = false;
+        System.out.println("Error - CompareTo(real-rational)");
+        System.out.println("Real: " + test[i]);
+        System.out.println("Rational: " + rats[a]);
+      }
+    }
+  }
+  System.out.println("\n compareTo(rational - real) (Part 3) - Test: "+ tester);
+  //--------------------//
+  System.out.println("\n multiply(rational - real) (Part 1) - Tests");
+  System.out.println("test14.multiply(rat4) Expected: 0.2857142857...");
+  System.out.println("test14.multiply(rat4)   Actual: "+test14.multiply(rat4));
+  System.out.println("test17.multiply(rat18) Expected: -14.924811556599299...");
+  System.out.println("test17.multiply(rat18)   Actual: "+test17.multiply(rat18));
+  System.out.println("test23.multiply(rat12) Expected: 0.07957747154594766788...");
+  System.out.println("test23.multiply(rat12)   Actual: "+test23.multiply(rat12));
+  System.out.println("test19.multiply(rat10) Expected: -3.79661045e-8");
+  System.out.println("test19.multiply(rat10)   Actual: "+test19.multiply(rat10));
+  System.out.println("test22.multiply(rat16) Expected: -8.078381109230...");
+  System.out.println("test22.multiply(rat16)   Actual: "+test22.multiply(rat16));
+  //--------------------//
+  System.out.println("rat4.multiply(test14) Expected: 0.2857142857...");
+  System.out.println("rat4.multiply(test14)   Actual: "+rat4.multiply(test14));
+  System.out.println("rat18.multiply(test17) Expected: -14.924811556599299...");
+  System.out.println("rat18.multiply(test17)   Actual: "+rat18.multiply(test17));
+  System.out.println("rat12.multiply(test23) Expected: 0.07957747154594766788...");
+  System.out.println("rat12.multiply(test23)   Actual: "+rat12.multiply(test23));
+  System.out.println("rat10.multiply(test19) Expected: -3.79661045e-8");
+  System.out.println("rat10.multiply(test19)   Actual: "+rat10.multiply(test19));
+  System.out.println("rat16.multiply(test22) Expected: -8.078381109230...");
+  System.out.println("rat16.multiply(test22)   Actual: "+rat16.multiply(test22));
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < test.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      double x = test[i].getValue();
+      double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+      if (test[i].multiply(rats[a]) != (x * y)) {
+        tester = false;
+        System.out.println("Error - multiply(real-rational)");
+        System.out.println("Real: " + test[i]);
+        System.out.println("Rational: " + rats[a]);
+      }
+    }
+  }
+  System.out.println("\n multiply(rational - real) (Part 2) - Test: "+ tester);
+  //--------------------//
+  tester = true;
+  for (int i = 0; i < test.length; i++) {
+    for (int a = 0; a < rats.length; a++) {
+      double x = test[i].getValue();
+      double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+      if (rats[a].multiply(test[i]) != (y * x)) {
+        tester = false;
+        System.out.println("Error - multiply(real-rational)");
+        System.out.println("Real: " + test[i]);
+        System.out.println("Rational: " + rats[a]);
+      }
+    }
+  }
+  System.out.println("\n multiply(rational - real) (Part 3) - Test: "+ tester);
+   //--------------------//
+   System.out.println("\n divide(rational - real) (Part 1)- Tests");
+   System.out.println("rat0/test22 Expected: 0");
+   System.out.println("rat0/test22 Actual: "+ rat0.divide(test22));
+   System.out.println("test21/rat11 Expected: 0");
+   System.out.println("test21/rat11 Actual: "+ test21.divide(rat11));
+   //--------------------//
+   RationalNumber[] ratsNoZero = {rat4,rat5,rat6,rat7,rat8,rat9,rat10,rat11,rat12,rat13,rat14,rat15,rat16,rat17,rat18,rat19,rat20,rat21,rat22,rat24,rat25,rat32,rat33,rat34,rat35,rat36,rat37,rat39,rat40,rat41,rat42,rat43,rat44,rat45};
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < ratsNoZero.length; a++) {
+       double x = test[i].getValue();
+       double y = ratsNoZero[a].getNumerator() / (ratsNoZero[a].getDenominator() * 1.0);
+       if (test[i].divide(ratsNoZero[a]) != (x / y)) {
+         tester = false;
+         System.out.println("Error - divide(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n add(rational - real) (Part 2) - Test: "+ tester);
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < ratsNoZero.length; a++) {
+       double x = test[i].getValue();
+       double y = ratsNoZero[a].getNumerator() / (ratsNoZero[a].getDenominator() * 1.0);
+       if (ratsNoZero[a].divide(test[i]) != (y / x)) {
+         tester = false;
+         System.out.println("Error - divide(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n add(rational - real) (Part 3) - Test: "+ tester);
+   //--------------------//
+   System.out.println("\n add(rational - real) - Tests");
 
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < rats.length; a++) {
+       double x = test[i].getValue();
+       double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+       if (test[i].add(rats[a]) != (x + y)) {
+         tester = false;
+         System.out.println("Error - add(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n add(rational - real) (Part 2) - Test: "+ tester);
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < rats.length; a++) {
+       double x = test[i].getValue();
+       double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+       if (rats[a].add(test[i]) != (y + x)) {
+         tester = false;
+         System.out.println("Error - add(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n add(rational - real) (Part 3) - Test: "+ tester);
+   //--------------------//
+   System.out.println("\n subtract(rational - real) - Tests");
+
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < rats.length; a++) {
+       double x = test[i].getValue();
+       double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+       if (test[i].subtract(rats[a]) != (x - y)) {
+         tester = false;
+         System.out.println("Error - subtract(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n subtract(rational - real) (Part 2) - Test: "+ tester);
+   //--------------------//
+   tester = true;
+   for (int i = 0; i < test.length; i++) {
+     for (int a = 0; a < rats.length; a++) {
+       double x = test[i].getValue();
+       double y = rats[a].getNumerator() / (rats[a].getDenominator() * 1.0);
+       if (rats[a].subtract(test[i]) != (y - x)) {
+         tester = false;
+         System.out.println("Error - subtract(real-rational)");
+         System.out.println("Real: " + test[i]);
+         System.out.println("Rational: " + rats[a]);
+       }
+     }
+   }
+   System.out.println("\n subtract(rational - real) (Part 3) - Test: "+ tester);
+}
 }
