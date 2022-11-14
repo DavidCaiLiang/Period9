@@ -1991,10 +1991,18 @@ public class Lab06_Driver {
   System.out.println("\n multiply(rational - real) (Part 3) - Test: "+ tester);
    //--------------------//
    System.out.println("\n divide(rational - real) (Part 1)- Tests");
-   System.out.println("rat0/test22 Expected: 0");
+   System.out.println("rat0/test22 Expected: 0.0");
    System.out.println("rat0/test22 Actual: "+ rat0.divide(test22));
-   System.out.println("test21/rat11 Expected: 0");
+   System.out.println("test21/rat11 Expected: 0.0");
    System.out.println("test21/rat11 Actual: "+ test21.divide(rat11));
+   System.out.println("test0/rat32 Expected: 0.0");
+   System.out.println("test0/rat32 Actual: "+ test0.divide(rat32));
+   System.out.println("rat1/test19 Expected: 0.0");
+   System.out.println("rat1/test19 Actual: "+ rat1.divide(test19));
+   System.out.println("rat4/test28 Expected: 4.0");
+   System.out.println("rat4/test28 Actual: "+ rat4.divide(test28));
+   System.out.println("test35/rat12 Expected: -12.0");
+   System.out.println("test35/rat12 Actual: "+ test35.divide(rat12));
    //--------------------//
    RationalNumber[] ratsNoZero = {rat4,rat5,rat6,rat7,rat8,rat9,rat10,rat11,rat12,rat13,rat14,rat15,rat16,rat17,rat18,rat19,rat20,rat21,rat22,rat24,rat25,rat32,rat33,rat34,rat35,rat36,rat37,rat39,rat40,rat41,rat42,rat43,rat44,rat45};
    //--------------------//
@@ -2029,6 +2037,10 @@ public class Lab06_Driver {
    System.out.println("\n add(rational - real) (Part 3) - Test: "+ tester);
    //--------------------//
    System.out.println("\n add(rational - real) - Tests");
+   System.out.println("rat0.add(test0) Expected: 0.0");
+   System.out.println("Expected: "+rat0.add(test0));
+   System.out.println("rat10.add(test31) Expected: -1.5");
+   System.out.println("Expected: "+rat10.add(test31));
 
    //--------------------//
    tester = true;
@@ -2093,5 +2105,15 @@ public class Lab06_Driver {
      }
    }
    System.out.println("\n subtract(rational - real) (Part 3) - Test: "+ tester);
+
+   RealNumber set0 = new RationalNumber(1,3);
+   RealNumber set1 = new RationalNumber(1,3);
+   RationalNumber qd0 = new RationalNumber(1,2);
+   System.out.println(set0);
+   System.out.println(set1);
+   System.out.println(qd0.divide(set0));
+   System.out.println(qd0.add(set0));
+   System.out.println(qd0.subtract(set0));
+   System.out.println(qd0.multiply(set0));
 }
 }
