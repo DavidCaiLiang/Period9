@@ -2115,5 +2115,6 @@ public class Lab06_Driver {
    System.out.println(qd0.add(set0));
    System.out.println(qd0.subtract(set0));
    System.out.println(qd0.multiply(set0));
+   System.out.println(qd0);
 }
 }
