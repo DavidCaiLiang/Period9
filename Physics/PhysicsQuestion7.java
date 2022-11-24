@@ -28,6 +28,7 @@ public class PhysicsQuestion7{
     }
     System.out.println(compressions);
     System.out.println(kes);
+    System.out.println(direction);
     double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(springConstant * mass * gravity));
     if (direction) {
       return deltaD + springLength;
