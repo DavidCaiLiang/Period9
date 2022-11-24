@@ -10,13 +10,16 @@ public class PhysicsQuestion7{
     */
     double compression = initialCompression;
     double ke = 0.5* springConstant * initialCompression * initialCompression - (coefficientOfFriction * mass * gravity * (initialCompression + distance - (2 * springLength)));
+    ArrayList<Double> distanceTravelPerCycle = new ArrayList<Double> ();
     ArrayList<Double> compressions = new ArrayList<Double> ();
     ArrayList<Double> kes = new ArrayList<Double> ();
     compressions.add(compression);
     kes.add(ke);
+    distanceTravelPerCycle.add(compression + distance - (2* springLength));
     while (ke > 0 && compression > 0) {
       compression = (((-1 * coefficientOfFriction * mass * gravity) + Math.sqrt((coefficientOfFriction * coefficientOfFriction * mass * mass * gravity * gravity) + (2 * springConstant * ke)))/ springConstant);
       compressions.add(compression);
+      distanceTravelPerCycle.add(compression);
       if (direction) {
         direction = false;
       }
@@ -25,11 +28,17 @@ public class PhysicsQuestion7{
       }
       ke = 0.5* springConstant * compression * compression - (coefficientOfFriction * mass * gravity * (compression + distance - (2 * springLength)));
       kes.add(ke);
+      distanceTravelPerCycle.add(compression + distance - (2* springLength));
     }
-    System.out.println(compressions);
-    System.out.println(kes);
-    System.out.println(direction);
+    System.out.println("Compression Array: "+compressions);
+    System.out.println("Kinetic Energy at contact with Spring Array: "+kes);
+    System.out.println("Is it going left to right: "+direction);
     double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(springConstant * mass * gravity));
+    distanceTravelPerCycle.set(distanceTravelPerCycle.size()-1,deltaD+ springLength);
+    System.out.println("Distance travel per item (either spring compress or spring expand) Array: "+distanceTravelPerCycle);
+    /*
+    Spring expand includes travel of block beyond spring length toward the spring on the other side.
+    */
     if (direction) {
       return deltaD + springLength;
     }
