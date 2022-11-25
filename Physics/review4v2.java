@@ -41,7 +41,6 @@ public class review4v2{
 
   public static double totalDistanceTraveled(double mass, double springConstant, double distance, double springLength, double coefficientOfFriction, double initialCompression) {
     double gravity = 9.81;
-    boolean direction = true;
     /*
     True corresponds with left to right;
     False corresponds with right to left;
@@ -68,9 +67,9 @@ public class review4v2{
     System.out.println("Compression Array: "+compressions);
     System.out.println("\nKinetic Energy at contact with Spring Array: "+kes);
     System.out.println("The final value of the Kinetic Energy Array is supposed to negative!");
-    System.out.println("\nIs it going left to right: "+direction);
+    //System.out.println("\nIs it going left to right: "+direction);
     double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(springConstant * mass * gravity));
-    distanceTravelPerItem.set(distanceTravelPerItem.size()-1,deltaD+ springLength);
+    distanceTravelPerItem.set(distanceTravelPerItem.size()-1,deltaD+ compression);
     System.out.println("\nDistance travel per item (either spring compress or spring expand) Array: "+distanceTravelPerItem);
     double distanceAdder = 0;
     for (int i = 0; i < distanceTravelPerItem.size(); i++) {
@@ -158,8 +157,8 @@ public class review4v2{
 
   public static void main(String[] args) {
     System.out.println(finalPositionRelativeToBaseOfLeftSpring(0.05,120.0,1.0,0.25,0.3,0.2));
-    System.out.println(totalDistanceTraveled(0.05,120.0,1.0,0.25,0.3,0.2));
-    System.out.println(velocity(0.05,120.0,1.0,0.25,0.3,0.2, 0.0005));
+    //System.out.println(totalDistanceTraveled(0.05,120.0,1.0,0.25,0.3,0.2));
+    //System.out.println(velocity(0.05,120.0,1.0,0.25,0.3,0.2, 0.0005));
   }
 
 }

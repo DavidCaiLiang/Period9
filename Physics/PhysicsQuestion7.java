@@ -5,15 +5,16 @@ public class PhysicsQuestion7{
     double gravity = 9.81;
     boolean direction = true;
     /*
-    T corresponds with left to right;
-    F corresponds with right to left;
+    True corresponds with left to right;
+    False corresponds with right to left;
     */
     double compression = initialCompression;
     double ke = 0.5* springConstant * initialCompression * initialCompression - (coefficientOfFriction * mass * gravity * (initialCompression + distance - (2 * springLength)));
     ArrayList<Double> distanceTravelPerItem = new ArrayList<Double> ();
     ArrayList<Double> distanceTotal = new ArrayList<Double> ();
     ArrayList<Double> compressions = new ArrayList<Double> ();
-    ArrayList<Double> kes = new ArrayList<Double> ();
+    ArrayList<Double> kes = new ArrayList<Double> ();              //Kinetic Energy values, fail over value added to array as well
+    ArrayList<Double> velocity = new ArrayList<Double> ();        //positve values are left -> right, negative values are left <- right
     compressions.add(compression);
     kes.add(ke);
     distanceTravelPerItem.add(compression + distance - (2* springLength));
@@ -33,6 +34,15 @@ public class PhysicsQuestion7{
     }
     System.out.println("Compression Array: "+compressions);
     System.out.println("\nKinetic Energy at contact with Spring Array: "+kes);
+    for (int i = 0; i < kes.size() -1; i++) {
+      if (i % 2 == 1) {
+        velocity.add(-1 * Math.sqrt(kes.get(i) * 2 / mass));
+      }
+      else {
+      velocity.add(Math.sqrt(kes.get(i) * 2 / mass));
+    }
+    }
+    System.out.println("\nVelocity at contact with Spring Array: "+velocity);
     System.out.println("\nIs it going left to right: "+direction);
     double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(springConstant * mass * gravity));
     distanceTravelPerItem.set(distanceTravelPerItem.size()-1,deltaD+ springLength);
