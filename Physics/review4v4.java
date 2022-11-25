@@ -20,7 +20,7 @@ public class review4v4{
     }
     //This is after the loop fails.
     //We find the travel of the block after leaving a spring for the last time.
-    double deltaD = (springForce(springConstant,compression)-frictionForce(coefficientOfFriction, mass, gravity, compression)/(springConstant * mass * gravity));
+    double deltaD = ((springForce(springConstant,compression)-frictionForce(coefficientOfFriction, mass, gravity, compression))/(springConstant * mass * gravity));
     //If the block is going left to right, we add the length of the left spring and deltaD.
     //If the block is going right to left, we subtract the 1m from the length of the right spring and deltaD to get the absolute distance compared to the base of the left spring.
      if (direction) {
