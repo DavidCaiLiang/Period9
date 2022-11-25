@@ -8,7 +8,7 @@ public class review4v4{
     */
     //KE as block hits right spring for the first time. This will change as the block hits each subsequent spring.
     double ke = (0.5* springConstant * initialCompression * initialCompression) - (coefficientOfFriction * mass * gravity * (initialCompression + distance - (2 * springLength)));
-    //The maximum compression of the spring when the blocks hits it starting from 0.2, the initial compression.
+    //The maximum compression of the springs when the block hits it starting from 0.2, the initial compression.
     double compression = initialCompression;
     while (ke > 0) {
       //We find the compression of the spring, this accounts for friction loss.

@@ -13,10 +13,10 @@ public class review4v3{
     }
     double deltaD = ((0.5 * springConstant * compression * compression)-(coefficientOfFriction * mass * gravity * compression)/(springConstant * mass * gravity));
      if (direction) {
-       return deltaD + springLength - compression;
+       return deltaD + springLength;
      }
      else {
-       return (distance - (springLength - compression + deltaD));
+       return (distance - (springLength + deltaD));
      }
   }
 
