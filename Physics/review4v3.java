@@ -82,7 +82,7 @@ while (ke > 0 && compression > 0) {
   distanceTravelPerItem.add(compression + distance - (2* springLength));
 }
 double deltaD = ((0.5 * springConstant * compression * compression)-(coefficientOfFriction * mass * gravity * compression)/(springConstant * mass * gravity));
-distanceTravelPerItem.set(distanceTravelPerItem.size()-1,deltaD+ springLength);
+distanceTravelPerItem.set(distanceTravelPerItem.size()-1,deltaD);
 return distanceTravelPerItem;
 }
 
@@ -138,13 +138,6 @@ distances += (deltaD + compression);
 return distances;
 }
 
-  public static ArrayList<Double> velocity(double mass, double springConstant, double distance, double springLength, double coefficientOfFriction, double initialCompression, double precision) {
-    double gravity = 9.81;
-    double keAtSpringCollision = 0.5* springConstant * initialCompression * initialCompression - (coefficientOfFriction * mass * gravity * (initialCompression + distance - (2 * springLength)));
-    double compression = initialCompression;
-    ArrayList<Double> velocity = new ArrayList<Double> ();
-    return velocity;
-  }
 
  public static void main(String[] args) {
    //System.out.println(finalDistance(0.05,120.0,1.0,0.25,0.3,0.2));
