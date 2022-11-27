@@ -22,7 +22,7 @@ public class review4v2{
     System.out.println("The final value of the Kinetic Energy Array is supposed to negative!");
 
     System.out.println("\nIs it going left to right: "+ (kes.size() % 2 == 1) + "\n");
-    double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(springConstant * mass * gravity));
+    double deltaD = ((0.5 * springConstant * compressions.get(compressions.size()-1) * compressions.get(compressions.size()-1))-(coefficientOfFriction * mass * gravity * compressions.get(compressions.size()-1))/(coefficientOfFriction * mass * gravity));
     // for (int i = 0; i < kes.size(); i++) {
     //   if (i % 2 == 0) {
     //     System.out.println("\\");
