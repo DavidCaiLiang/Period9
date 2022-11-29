@@ -37,7 +37,7 @@ public class review4v4{
     System.out.println("Traveling Left to Right before Stopping: "+direction);
     distanceTraveled+=(deltaD - (distance - (2 * springLength)));
     System.out.println("Total Distance Traveled: "+distanceTraveled);
-    System.out.println("Total Bounces: "+(bounces-1));
+    System.out.println("Total Bounces: "+bounces);
      if (direction) {
        return deltaD + springLength;
      }
