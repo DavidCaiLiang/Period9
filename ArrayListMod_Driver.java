@@ -897,9 +897,10 @@ else {
 }
 //experimental
 ints.clear();
-for (int i = 0; i < 30000; i++) {
-  orderedInts.add((int) (Math.random() * 100));
+ints.clear();
+for (int i = 0; i < 160000; i++) {
+  orderedInts.add((int) (Math.random() * 1000000));
 }
-System.out.println(ints);
+System.out.println(orderedInts);
 }
 }
