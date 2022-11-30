@@ -845,7 +845,6 @@ for (int i = 0; i < 20; i++) {
 }
 if (!(orderedInts.toString().equals("[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]"))) {
   test = false;
-  System.out.println("Your output: "+orderedInts);
 }
 try {
 if (orderedInts.set(7,23) == 7) {
@@ -853,7 +852,6 @@ if (orderedInts.set(7,23) == 7) {
 }
 if (!(orderedInts.toString().equals("[0, 2, 4, 6, 8, 10, 12, 16, 18, 20, 22, 23, 24, 26, 28, 30, 32, 34, 36, 38]"))) {
   test = false;
-  System.out.println("Your output: "+orderedInts);
 }
 }
 catch(IllegalArgumentException e) {
@@ -865,18 +863,15 @@ if (orderedInts.set(13,11) == 13) {
 }
 if (!(orderedInts.toString().equals("[0, 2, 4, 6, 8, 10, 11, 12, 16, 18, 20, 22, 23, 24, 28, 30, 32, 34, 36, 38]"))) {
   test = false;
-  System.out.println("Your output: "+orderedInts);
 }
 }
 catch(IllegalArgumentException e) {
 System.out.println("Ordered 3: Fail, 1");
-System.out.println("Your output: "+orderedInts);
 }
 try {
 orderedInts.set(12,null);
 if (!(orderedInts.toString().equals("[0, 2, 4, 6, 8, 10, 11, 12, 16, 18, 20, 22, 23, 24, 28, 30, 32, 34, 36, 38]"))) {
   test = false;
-  System.out.println("Your output: "+orderedInts);
 }
 System.out.println("Ordered 3: Pass, 2");
 }
@@ -886,7 +881,6 @@ try {
 orderedInts.set(5,24);
 if (!(orderedInts.toString().equals("[0, 2, 4, 6, 8, 11, 12, 16, 18, 20, 22, 23, 24, 24, 28, 30, 32, 34, 36, 38]"))) {
   test = false;
-  System.out.println("Your output: "+orderedInts);
 }
 }
 catch(IllegalArgumentException e) {
@@ -899,7 +893,6 @@ if (test) {
 else {
   System.out.println("Ordered 3: Fail");
 }
-
 }
 //experimental
 ints.clear();
