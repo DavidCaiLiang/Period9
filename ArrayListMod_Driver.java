@@ -897,7 +897,7 @@ else {
 }
 //experimental
 ints.clear();
-for (int i = 0; i < 3000000; i++) {
+for (int i = 0; i < 30000; i++) {
   orderedInts.add((int) (Math.random() * 100));
 }
 System.out.println(ints);
