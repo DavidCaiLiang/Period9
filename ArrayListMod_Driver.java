@@ -895,11 +895,11 @@ else {
 }
 }
 //experimental
-ints.clear();
-ints.clear();
-for (int i = 0; i < 160000; i++) {
-  orderedInts.add((int) (Math.random() * 1000000));
-}
-System.out.println(orderedInts);
+// ints.clear();
+// ints.clear();
+// for (int i = 0; i < 160000; i++) {
+//   orderedInts.add((int) (Math.random() * 1000000));
+// }
+// System.out.println(orderedInts);
 }
 }
